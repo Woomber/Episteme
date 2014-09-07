@@ -1,2 +1,12 @@
 C:\Users\Yael\Documents\GitHub\Episteme\Episteme\bin\Debug\Episteme.exe.config
 C:\Users\Yael\Documents\GitHub\Episteme\bin\Debug\Episteme.exe.config
+C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.Form1.resources
+C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.Resources.resources
+C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.Quadratic.resources
+C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.vbproj.GenerateResource.Cache
+C:\Users\Yael\Documents\GitHub\Episteme\bin\Debug\Episteme.exe
+C:\Users\Yael\Documents\GitHub\Episteme\bin\Debug\Episteme.pdb
+C:\Users\Yael\Documents\GitHub\Episteme\bin\Debug\Episteme.xml
+C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.exe
+C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.xml
+C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.pdb

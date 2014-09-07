@@ -9,11 +9,6 @@
     Dim rn1 As Integer = 0
     Dim rn2 As Integer = 9
 
-    Private Sub AcercaDeQadraticToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AcercaDeQadraticToolStripMenuItem.Click
-        AboutBox1.Show()
-
-    End Sub
-
     Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
         Me.Close()
     End Sub
