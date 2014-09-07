@@ -98,6 +98,12 @@
     <Compile Include="Quadratic.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vektor.Designer.vb">
+      <DependentUpon>Vektor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vektor.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="StartUI.resx">
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Quadratic.resx">
       <DependentUpon>Quadratic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vektor.resx">
+      <DependentUpon>Vektor.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
