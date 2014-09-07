@@ -26,6 +26,7 @@ Partial Class StartUI
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -62,11 +63,21 @@ Partial Class StartUI
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
         Me.CerrarToolStripMenuItem.ToolTipText = "Cerrar Episteme"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(12, 74)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(178, 43)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "Vektor" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(R = A + B)"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'StartUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(204, 314)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -82,5 +93,6 @@ Partial Class StartUI
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents InicioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CerrarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class

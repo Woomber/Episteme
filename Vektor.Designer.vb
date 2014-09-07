@@ -22,6 +22,7 @@ Partial Class Vektor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.LongA = New System.Windows.Forms.TextBox()
         Me.DirA = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -33,6 +34,15 @@ Partial Class Vektor
         Me.LongB = New System.Windows.Forms.TextBox()
         Me.DirB = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Lry = New System.Windows.Forms.Label()
+        Me.Lrx = New System.Windows.Forms.Label()
+        Me.Lr = New System.Windows.Forms.Label()
+        Me.Lby = New System.Windows.Forms.Label()
+        Me.Lbx = New System.Windows.Forms.Label()
+        Me.Lb = New System.Windows.Forms.Label()
+        Me.Lay = New System.Windows.Forms.Label()
+        Me.Lax = New System.Windows.Forms.Label()
+        Me.La = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -43,23 +53,31 @@ Partial Class Vektor
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.PonerRComoVectorAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PonerRComoVectorBToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'LongA
         '
         Me.LongA.Location = New System.Drawing.Point(63, 25)
         Me.LongA.Name = "LongA"
-        Me.LongA.Size = New System.Drawing.Size(100, 20)
+        Me.LongA.Size = New System.Drawing.Size(106, 20)
         Me.LongA.TabIndex = 0
         '
         'DirA
         '
         Me.DirA.Location = New System.Drawing.Point(63, 51)
         Me.DirA.Name = "DirA"
-        Me.DirA.Size = New System.Drawing.Size(100, 20)
+        Me.DirA.Size = New System.Drawing.Size(106, 20)
         Me.DirA.TabIndex = 2
         '
         'GroupBox1
@@ -128,18 +146,28 @@ Partial Class Vektor
         '
         Me.LongB.Location = New System.Drawing.Point(63, 25)
         Me.LongB.Name = "LongB"
-        Me.LongB.Size = New System.Drawing.Size(100, 20)
+        Me.LongB.Size = New System.Drawing.Size(106, 20)
         Me.LongB.TabIndex = 0
         '
         'DirB
         '
         Me.DirB.Location = New System.Drawing.Point(63, 51)
         Me.DirB.Name = "DirB"
-        Me.DirB.Size = New System.Drawing.Size(100, 20)
+        Me.DirB.Size = New System.Drawing.Size(106, 20)
         Me.DirB.TabIndex = 2
         '
         'GroupBox3
         '
+        Me.GroupBox3.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.GroupBox3.Controls.Add(Me.Lry)
+        Me.GroupBox3.Controls.Add(Me.Lrx)
+        Me.GroupBox3.Controls.Add(Me.Lr)
+        Me.GroupBox3.Controls.Add(Me.Lby)
+        Me.GroupBox3.Controls.Add(Me.Lbx)
+        Me.GroupBox3.Controls.Add(Me.Lb)
+        Me.GroupBox3.Controls.Add(Me.Lay)
+        Me.GroupBox3.Controls.Add(Me.Lax)
+        Me.GroupBox3.Controls.Add(Me.La)
         Me.GroupBox3.Controls.Add(Me.Label11)
         Me.GroupBox3.Controls.Add(Me.Label12)
         Me.GroupBox3.Controls.Add(Me.Label13)
@@ -151,10 +179,91 @@ Partial Class Vektor
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Location = New System.Drawing.Point(193, 12)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(174, 184)
+        Me.GroupBox3.Size = New System.Drawing.Size(254, 184)
         Me.GroupBox3.TabIndex = 6
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Resultados"
+        '
+        'Lry
+        '
+        Me.Lry.AutoSize = True
+        Me.Lry.Location = New System.Drawing.Point(41, 153)
+        Me.Lry.Name = "Lry"
+        Me.Lry.Size = New System.Drawing.Size(13, 13)
+        Me.Lry.TabIndex = 17
+        Me.Lry.Text = "0"
+        '
+        'Lrx
+        '
+        Me.Lrx.AutoSize = True
+        Me.Lrx.Location = New System.Drawing.Point(41, 140)
+        Me.Lrx.Name = "Lrx"
+        Me.Lrx.Size = New System.Drawing.Size(13, 13)
+        Me.Lrx.TabIndex = 16
+        Me.Lrx.Text = "0"
+        '
+        'Lr
+        '
+        Me.Lr.AutoSize = True
+        Me.Lr.Location = New System.Drawing.Point(41, 127)
+        Me.Lr.Name = "Lr"
+        Me.Lr.Size = New System.Drawing.Size(13, 13)
+        Me.Lr.TabIndex = 15
+        Me.Lr.Text = "0"
+        '
+        'Lby
+        '
+        Me.Lby.AutoSize = True
+        Me.Lby.Location = New System.Drawing.Point(41, 102)
+        Me.Lby.Name = "Lby"
+        Me.Lby.Size = New System.Drawing.Size(13, 13)
+        Me.Lby.TabIndex = 14
+        Me.Lby.Text = "0"
+        '
+        'Lbx
+        '
+        Me.Lbx.AutoSize = True
+        Me.Lbx.Location = New System.Drawing.Point(41, 89)
+        Me.Lbx.Name = "Lbx"
+        Me.Lbx.Size = New System.Drawing.Size(13, 13)
+        Me.Lbx.TabIndex = 13
+        Me.Lbx.Text = "0"
+        '
+        'Lb
+        '
+        Me.Lb.AutoSize = True
+        Me.Lb.Location = New System.Drawing.Point(41, 76)
+        Me.Lb.Name = "Lb"
+        Me.Lb.Size = New System.Drawing.Size(13, 13)
+        Me.Lb.TabIndex = 12
+        Me.Lb.Text = "0"
+        '
+        'Lay
+        '
+        Me.Lay.AutoSize = True
+        Me.Lay.Location = New System.Drawing.Point(41, 51)
+        Me.Lay.Name = "Lay"
+        Me.Lay.Size = New System.Drawing.Size(13, 13)
+        Me.Lay.TabIndex = 11
+        Me.Lay.Text = "0"
+        '
+        'Lax
+        '
+        Me.Lax.AutoSize = True
+        Me.Lax.Location = New System.Drawing.Point(41, 38)
+        Me.Lax.Name = "Lax"
+        Me.Lax.Size = New System.Drawing.Size(13, 13)
+        Me.Lax.TabIndex = 10
+        Me.Lax.Text = "0"
+        '
+        'La
+        '
+        Me.La.AutoSize = True
+        Me.La.Location = New System.Drawing.Point(41, 25)
+        Me.La.Name = "La"
+        Me.La.Size = New System.Drawing.Size(13, 13)
+        Me.La.TabIndex = 9
+        Me.La.Text = "0"
         '
         'Label11
         '
@@ -241,24 +350,69 @@ Partial Class Vektor
         '
         Me.Button1.Location = New System.Drawing.Point(12, 202)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(355, 23)
+        Me.Button1.Size = New System.Drawing.Size(373, 23)
         Me.Button1.TabIndex = 7
         Me.Button1.Text = "Calcular"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PonerRComoVectorAToolStripMenuItem, Me.PonerRComoVectorBToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(198, 48)
+        '
+        'PonerRComoVectorAToolStripMenuItem
+        '
+        Me.PonerRComoVectorAToolStripMenuItem.Name = "PonerRComoVectorAToolStripMenuItem"
+        Me.PonerRComoVectorAToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.PonerRComoVectorAToolStripMenuItem.Text = "Poner R como Vector A"
+        '
+        'PonerRComoVectorBToolStripMenuItem
+        '
+        Me.PonerRComoVectorBToolStripMenuItem.Name = "PonerRComoVectorBToolStripMenuItem"
+        Me.PonerRComoVectorBToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.PonerRComoVectorBToolStripMenuItem.Text = "Poner R como Vector B"
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 229)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(459, 22)
+        Me.StatusStrip1.TabIndex = 8
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(233, 17)
+        Me.ToolStripStatusLabel1.Text = "Copyright © Yael Arturo Chavoya Andalón"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(391, 202)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(56, 23)
+        Me.Button2.TabIndex = 9
+        Me.Button2.Text = "Cerrar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Vektor
         '
+        Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(380, 234)
+        Me.ClientSize = New System.Drawing.Size(459, 251)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(396, 273)
-        Me.MinimumSize = New System.Drawing.Size(396, 273)
+        Me.MaximumSize = New System.Drawing.Size(475, 290)
+        Me.MinimumSize = New System.Drawing.Size(475, 290)
         Me.Name = "Vektor"
         Me.Text = "Vektor"
         Me.GroupBox1.ResumeLayout(False)
@@ -267,7 +421,11 @@ Partial Class Vektor
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.ContextMenuStrip1.ResumeLayout(False)
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents LongA As System.Windows.Forms.TextBox
@@ -291,4 +449,19 @@ Partial Class Vektor
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Lry As System.Windows.Forms.Label
+    Friend WithEvents Lrx As System.Windows.Forms.Label
+    Friend WithEvents Lr As System.Windows.Forms.Label
+    Friend WithEvents Lby As System.Windows.Forms.Label
+    Friend WithEvents Lbx As System.Windows.Forms.Label
+    Friend WithEvents Lb As System.Windows.Forms.Label
+    Friend WithEvents Lay As System.Windows.Forms.Label
+    Friend WithEvents Lax As System.Windows.Forms.Label
+    Friend WithEvents La As System.Windows.Forms.Label
+    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents PonerRComoVectorAToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PonerRComoVectorBToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
+    Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class
