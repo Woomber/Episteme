@@ -120,7 +120,7 @@ Partial Class Vektor
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(178, 83)
+        Me.GroupBox1.Size = New System.Drawing.Size(174, 84)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Vector A"
@@ -150,9 +150,9 @@ Partial Class Vektor
         Me.GroupBox2.Controls.Add(Me.LongB)
         Me.GroupBox2.Controls.Add(Me.DirB)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 92)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 93)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(178, 86)
+        Me.GroupBox2.Size = New System.Drawing.Size(174, 84)
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Vector B"
@@ -211,10 +211,10 @@ Partial Class Vektor
         Me.GroupBox3.Controls.Add(Me.Label6)
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox3.Location = New System.Drawing.Point(187, 3)
+        Me.GroupBox3.Location = New System.Drawing.Point(183, 3)
         Me.GroupBox3.Name = "GroupBox3"
         Me.TableLayoutPanel1.SetRowSpan(Me.GroupBox3, 2)
-        Me.GroupBox3.Size = New System.Drawing.Size(178, 175)
+        Me.GroupBox3.Size = New System.Drawing.Size(182, 174)
         Me.GroupBox3.TabIndex = 6
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Resultados"
@@ -414,9 +414,9 @@ Partial Class Vektor
         '
         Me.TableLayoutPanel1.SetColumnSpan(Me.Button1, 2)
         Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.Location = New System.Drawing.Point(3, 184)
+        Me.Button1.Location = New System.Drawing.Point(3, 183)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(362, 26)
+        Me.Button1.Size = New System.Drawing.Size(362, 27)
         Me.Button1.TabIndex = 7
         Me.Button1.Text = "Calcular"
         Me.Button1.UseVisualStyleBackColor = True
@@ -439,8 +439,8 @@ Partial Class Vektor
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox3, 1, 0)
@@ -450,7 +450,7 @@ Partial Class Vektor
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 92.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(368, 213)
         Me.TableLayoutPanel1.TabIndex = 10
@@ -490,13 +490,13 @@ Partial Class Vektor
         Me.SumaToolStripMenuItem.Checked = True
         Me.SumaToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.SumaToolStripMenuItem.Name = "SumaToolStripMenuItem"
-        Me.SumaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SumaToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
         Me.SumaToolStripMenuItem.Text = "Suma"
         '
         'RestaToolStripMenuItem
         '
         Me.RestaToolStripMenuItem.Name = "RestaToolStripMenuItem"
-        Me.RestaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RestaToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
         Me.RestaToolStripMenuItem.Text = "Resta"
         '
         'MemoriaToolStripMenuItem
@@ -635,9 +635,9 @@ Partial Class Vektor
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(384, 298)
         Me.Name = "Vektor"
         Me.Text = "Vektor"
         Me.GroupBox1.ResumeLayout(False)
