@@ -3,6 +3,11 @@
     Dim Va() As Double = {0, 0, 0, 0}
     Dim Vb() As Double = {0, 0, 0, 0}
     Dim Vr() As Double = {0, 0, 0, 0}
+    Dim M1() As Double = {0, 0}
+    Dim M2() As Double = {0, 0}
+    Dim M3() As Double = {0, 0}
+    Dim M4() As Double = {0, 0}
+    Dim isResta As Boolean = False
     'Sin, Cos, ArcTan
     Dim Tdeg As Double = 0
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -16,9 +21,13 @@
             Va(3) = Va(0) * Math.Sin((Math.PI / 180) * Va(1))
             Vb(2) = Vb(0) * Math.Cos((Math.PI / 180) * Vb(1))
             Vb(3) = Vb(0) * Math.Sin((Math.PI / 180) * Vb(1))
-
-            Vr(2) = Va(2) + Vb(2)
-            Vr(3) = Va(3) + Vb(3)
+            If isResta = 0 Then
+                Vr(2) = Va(2) + Vb(2)
+                Vr(3) = Va(3) + Vb(3)
+            Else
+                Vr(2) = Va(2) - Vb(2)
+                Vr(3) = Va(3) - Vb(3)
+            End If
             Vr(0) = Math.Sqrt((Vr(2) ^ 2) + (Vr(3) ^ 2))
 
             Tdeg = (180 / Math.PI) * Math.Atan(Vr(3) / Vr(2))
@@ -59,7 +68,74 @@
         DirB.Text = Vr(1)
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
         Me.Close()
     End Sub
+
+    Private Sub GuardarAMemoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarAMemoriaToolStripMenuItem.Click
+        ' Test MsgBox("Memorias llenas. Borre alguna de las memorias para almacenar los datos nuevos." & vbNewLine & "M1: " & M1(0) & ", " & M1(1) & vbNewLine & "M2: " & M2(0) & ", " & M2(1) & vbNewLine & "M3: " & M3(0) & ", " & M3(1) & vbNewLine & "M4: " & M4(0) & ", " & M4(1))
+        If Vr(0) <> 0 And Vr(1) <> 0 Then
+            If M1(0) = 0 And M1(1) = 0 Then
+                M1(0) = Vr(0)
+                M1(1) = Vr(1)
+                M1ToolStripMenuItem.Text = "M1: " & M1(0) & ", " & M1(1) & "°"
+            ElseIf M2(0) = 0 And M2(1) = 0 Then
+                M2(0) = Vr(0)
+                M2(1) = Vr(1)
+                M2ToolStripMenuItem.Text = "M2: " & M2(0) & ", " & M2(1) & "°"
+            ElseIf M3(0) = 0 And M3(1) = 0 Then
+                M3(0) = Vr(0)
+                M3(1) = Vr(1)
+                M3ToolStripMenuItem.Text = "M3: " & M3(0) & ", " & M3(1) & "°"
+            ElseIf M4(0) = 0 And M4(1) = 0 Then
+                M4(0) = Vr(0)
+                M4(1) = Vr(1)
+                M4ToolStripMenuItem.Text = "M4: " & M4(0) & ", " & M4(1) & "°"
+            Else
+                MsgBox("Memorias llenas. Borre alguna de las memorias para almacenar los datos nuevos." & vbNewLine & "M1: " & M1(0) & ", " & M1(1) & "°" & vbNewLine & "M2: " & M2(0) & ", " & M2(1) & "°" & vbNewLine & "M3: " & M3(0) & ", " & M3(1) & "°" & vbNewLine & "M4: " & M4(0) & ", " & M4(1) & "°")
+            End If
+        Else
+            MsgBox("Error: El vector resultante a guardar tiene un valor nulo." & vbNewLine & "Vr = " & Vr(0) & ", " & Vr(1) & "°")
+        End If
+    End Sub
+
+    Private Sub BorrarMemoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BorrarMemoriaToolStripMenuItem.Click
+        M1(0) = 0
+        M1(1) = 0
+        M1ToolStripMenuItem.Text = "M1"
+    End Sub
+
+    Private Sub BorrarMemoriaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles BorrarMemoriaToolStripMenuItem1.Click
+        M2(0) = 0
+        M2(1) = 0
+        M2ToolStripMenuItem.Text = "M2"
+    End Sub
+
+    Private Sub BorrarMemoriaToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles BorrarMemoriaToolStripMenuItem2.Click
+        M3(0) = 0
+        M3(1) = 0
+        M3ToolStripMenuItem.Text = "M3"
+    End Sub
+
+    Private Sub BorrarMemoriaToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles BorrarMemoriaToolStripMenuItem3.Click
+        M4(0) = 0
+        M4(1) = 0
+        M4ToolStripMenuItem.Text = "M4"
+    End Sub
+
+    Private Sub RestaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RestaToolStripMenuItem.Click
+        RestaToolStripMenuItem.Checked = True
+        SumaToolStripMenuItem.Checked = False
+        isResta = True
+        OpcionesToolStripMenuItem.Text = "Modo Resta"
+
+    End Sub
+
+    Private Sub SumaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SumaToolStripMenuItem.Click
+        SumaToolStripMenuItem.Checked = True
+        RestaToolStripMenuItem.Checked = False
+        isResta = False
+        OpcionesToolStripMenuItem.Text = "Modo Suma"
+    End Sub
+
 End Class

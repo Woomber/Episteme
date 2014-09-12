@@ -36,7 +36,7 @@ Partial Class StartUI
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(178, 43)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Quadratic" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(x^2)"
+        Me.Button1.Text = "Qadratic" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(x^2)"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'MenuStrip1
@@ -59,7 +59,7 @@ Partial Class StartUI
         '
         Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
         Me.CerrarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
         Me.CerrarToolStripMenuItem.ToolTipText = "Cerrar Episteme"
         '
