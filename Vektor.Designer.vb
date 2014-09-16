@@ -26,10 +26,14 @@ Partial Class Vektor
         Me.LongA = New System.Windows.Forms.TextBox()
         Me.DirA = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.CantVecA = New System.Windows.Forms.NumericUpDown()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.CantVecB = New System.Windows.Forms.NumericUpDown()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.LongB = New System.Windows.Forms.TextBox()
         Me.DirB = New System.Windows.Forms.TextBox()
@@ -57,7 +61,7 @@ Partial Class Vektor
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Calcular = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -88,8 +92,15 @@ Partial Class Vektor
         Me.ColocarEnVectorBToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.BorrarMemoriaToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AbrirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GuardarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnArchivoActualToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ComoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.CantVecA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.CantVecB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.ResultCMS.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -113,6 +124,8 @@ Partial Class Vektor
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.CantVecA)
+        Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.LongA)
@@ -120,10 +133,29 @@ Partial Class Vektor
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(174, 84)
+        Me.GroupBox1.Size = New System.Drawing.Size(174, 105)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Vector A"
+        '
+        'CantVecA
+        '
+        Me.CantVecA.Location = New System.Drawing.Point(93, 78)
+        Me.CantVecA.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
+        Me.CantVecA.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.CantVecA.Name = "CantVecA"
+        Me.CantVecA.Size = New System.Drawing.Size(76, 20)
+        Me.CantVecA.TabIndex = 6
+        Me.CantVecA.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(6, 80)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(80, 13)
+        Me.Label14.TabIndex = 5
+        Me.Label14.Text = "Núm. Vectores:"
         '
         'Label2
         '
@@ -145,17 +177,29 @@ Partial Class Vektor
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.CantVecB)
         Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.LongB)
         Me.GroupBox2.Controls.Add(Me.DirB)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 93)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 114)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(174, 84)
+        Me.GroupBox2.Size = New System.Drawing.Size(174, 105)
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Vector B"
+        '
+        'CantVecB
+        '
+        Me.CantVecB.Location = New System.Drawing.Point(93, 77)
+        Me.CantVecB.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
+        Me.CantVecB.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.CantVecB.Name = "CantVecB"
+        Me.CantVecB.Size = New System.Drawing.Size(76, 20)
+        Me.CantVecB.TabIndex = 8
+        Me.CantVecB.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label3
         '
@@ -165,6 +209,15 @@ Partial Class Vektor
         Me.Label3.Size = New System.Drawing.Size(55, 13)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Dirección:"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(6, 79)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(80, 13)
+        Me.Label15.TabIndex = 7
+        Me.Label15.Text = "Núm. Vectores:"
         '
         'Label4
         '
@@ -214,7 +267,7 @@ Partial Class Vektor
         Me.GroupBox3.Location = New System.Drawing.Point(183, 3)
         Me.GroupBox3.Name = "GroupBox3"
         Me.TableLayoutPanel1.SetRowSpan(Me.GroupBox3, 2)
-        Me.GroupBox3.Size = New System.Drawing.Size(182, 174)
+        Me.GroupBox3.Size = New System.Drawing.Size(182, 216)
         Me.GroupBox3.TabIndex = 6
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Resultados"
@@ -410,21 +463,21 @@ Partial Class Vektor
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Ax:"
         '
-        'Button1
+        'Calcular
         '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.Button1, 2)
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.Location = New System.Drawing.Point(3, 183)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(362, 27)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Calcular"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.TableLayoutPanel1.SetColumnSpan(Me.Calcular, 2)
+        Me.Calcular.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Calcular.Location = New System.Drawing.Point(3, 225)
+        Me.Calcular.Name = "Calcular"
+        Me.Calcular.Size = New System.Drawing.Size(362, 27)
+        Me.Calcular.TabIndex = 7
+        Me.Calcular.Text = "Calcular"
+        Me.Calcular.UseVisualStyleBackColor = True
         '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 237)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 279)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(368, 22)
         Me.StatusStrip1.TabIndex = 8
@@ -444,7 +497,7 @@ Partial Class Vektor
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox3, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Calcular, 0, 2)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 24)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -452,7 +505,7 @@ Partial Class Vektor
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(368, 213)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(368, 255)
         Me.TableLayoutPanel1.TabIndex = 10
         '
         'MenuStrip1
@@ -466,7 +519,7 @@ Partial Class Vektor
         '
         'InicioToolStripMenuItem
         '
-        Me.InicioToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CerrarToolStripMenuItem})
+        Me.InicioToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AbrirToolStripMenuItem, Me.GuardarToolStripMenuItem, Me.ToolStripSeparator6, Me.CerrarToolStripMenuItem})
         Me.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem"
         Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.InicioToolStripMenuItem.Text = "Inicio"
@@ -510,7 +563,7 @@ Partial Class Vektor
         '
         Me.M1ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColocarEnVectorAToolStripMenuItem, Me.ColocarEnVectorBToolStripMenuItem, Me.ToolStripSeparator2, Me.BorrarMemoriaToolStripMenuItem})
         Me.M1ToolStripMenuItem.Name = "M1ToolStripMenuItem"
-        Me.M1ToolStripMenuItem.Size = New System.Drawing.Size(91, 22)
+        Me.M1ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.M1ToolStripMenuItem.Text = "M1"
         '
         'ColocarEnVectorAToolStripMenuItem
@@ -540,7 +593,7 @@ Partial Class Vektor
         '
         Me.M2ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColocarEnVectorAToolStripMenuItem1, Me.ColocarEnVectorBToolStripMenuItem1, Me.ToolStripSeparator3, Me.BorrarMemoriaToolStripMenuItem1})
         Me.M2ToolStripMenuItem.Name = "M2ToolStripMenuItem"
-        Me.M2ToolStripMenuItem.Size = New System.Drawing.Size(91, 22)
+        Me.M2ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.M2ToolStripMenuItem.Text = "M2"
         '
         'ColocarEnVectorAToolStripMenuItem1
@@ -570,7 +623,7 @@ Partial Class Vektor
         '
         Me.M3ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColocarEnVectorAToolStripMenuItem2, Me.ColocarEnVectorBToolStripMenuItem2, Me.ToolStripSeparator4, Me.BorrarMemoriaToolStripMenuItem2})
         Me.M3ToolStripMenuItem.Name = "M3ToolStripMenuItem"
-        Me.M3ToolStripMenuItem.Size = New System.Drawing.Size(91, 22)
+        Me.M3ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.M3ToolStripMenuItem.Text = "M3"
         '
         'ColocarEnVectorAToolStripMenuItem2
@@ -600,7 +653,7 @@ Partial Class Vektor
         '
         Me.M4ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColocarEnVectorAToolStripMenuItem3, Me.ColocarEnVectorBToolStripMenuItem3, Me.ToolStripSeparator5, Me.BorrarMemoriaToolStripMenuItem3})
         Me.M4ToolStripMenuItem.Name = "M4ToolStripMenuItem"
-        Me.M4ToolStripMenuItem.Size = New System.Drawing.Size(91, 22)
+        Me.M4ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.M4ToolStripMenuItem.Text = "M4"
         '
         'ColocarEnVectorAToolStripMenuItem3
@@ -626,24 +679,56 @@ Partial Class Vektor
         Me.BorrarMemoriaToolStripMenuItem3.Size = New System.Drawing.Size(179, 22)
         Me.BorrarMemoriaToolStripMenuItem3.Text = "Borrar memoria"
         '
+        'AbrirToolStripMenuItem
+        '
+        Me.AbrirToolStripMenuItem.Name = "AbrirToolStripMenuItem"
+        Me.AbrirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AbrirToolStripMenuItem.Text = "Abrir"
+        '
+        'GuardarToolStripMenuItem
+        '
+        Me.GuardarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnArchivoActualToolStripMenuItem, Me.ComoToolStripMenuItem})
+        Me.GuardarToolStripMenuItem.Name = "GuardarToolStripMenuItem"
+        Me.GuardarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GuardarToolStripMenuItem.Text = "Guardar"
+        '
+        'EnArchivoActualToolStripMenuItem
+        '
+        Me.EnArchivoActualToolStripMenuItem.Name = "EnArchivoActualToolStripMenuItem"
+        Me.EnArchivoActualToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.EnArchivoActualToolStripMenuItem.Text = "En archivo actual"
+        '
+        'ComoToolStripMenuItem
+        '
+        Me.ComoToolStripMenuItem.Name = "ComoToolStripMenuItem"
+        Me.ComoToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ComoToolStripMenuItem.Text = "Como..."
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(149, 6)
+        '
         'Vektor
         '
-        Me.AcceptButton = Me.Button1
+        Me.AcceptButton = Me.Calcular
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(368, 259)
+        Me.ClientSize = New System.Drawing.Size(368, 301)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(384, 298)
+        Me.MinimumSize = New System.Drawing.Size(384, 340)
         Me.Name = "Vektor"
         Me.Text = "Vektor"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.CantVecA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.CantVecB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.ResultCMS.ResumeLayout(False)
@@ -676,7 +761,7 @@ Partial Class Vektor
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Calcular As System.Windows.Forms.Button
     Friend WithEvents Lry As System.Windows.Forms.Label
     Friend WithEvents Lrx As System.Windows.Forms.Label
     Friend WithEvents Lr As System.Windows.Forms.Label
@@ -721,4 +806,13 @@ Partial Class Vektor
     Friend WithEvents BorrarMemoriaToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SumaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RestaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CantVecA As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents CantVecB As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents AbrirToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GuardarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EnArchivoActualToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ComoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
 End Class

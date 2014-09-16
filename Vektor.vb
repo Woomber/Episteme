@@ -10,11 +10,12 @@
     Dim isResta As Boolean = False
     'Sin, Cos, ArcTan
     Dim Tdeg As Double = 0
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Calcular_Click(sender As Object, e As EventArgs) Handles Calcular.Click
         Try
-            Va(0) = CDbl(LongA.Text)
+
+            Va(0) = CInt(CantVecA.Value) * CDbl(LongA.Text)
             Va(1) = CDbl(DirA.Text)
-            Vb(0) = CDbl(LongB.Text)
+            Vb(0) = CInt(CantVecB.Value) * CDbl(LongB.Text)
             Vb(1) = CDbl(DirB.Text)
 
             Va(2) = Va(0) * Math.Cos((Math.PI / 180) * Va(1))
@@ -74,7 +75,7 @@
 
     Private Sub GuardarAMemoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarAMemoriaToolStripMenuItem.Click
         ' Test MsgBox("Memorias llenas. Borre alguna de las memorias para almacenar los datos nuevos." & vbNewLine & "M1: " & M1(0) & ", " & M1(1) & vbNewLine & "M2: " & M2(0) & ", " & M2(1) & vbNewLine & "M3: " & M3(0) & ", " & M3(1) & vbNewLine & "M4: " & M4(0) & ", " & M4(1))
-        If Vr(0) <> 0 And Vr(1) <> 0 Then
+        If Vr(0) <> 0 Then
             If M1(0) = 0 And M1(1) = 0 Then
                 M1(0) = Vr(0)
                 M1(1) = Vr(1)
@@ -97,33 +98,43 @@
         Else
             MsgBox("Error: El vector resultante a guardar tiene un valor nulo." & vbNewLine & "Vr = " & Vr(0) & ", " & Vr(1) & "°")
         End If
+
     End Sub
 
     Private Sub BorrarMemoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BorrarMemoriaToolStripMenuItem.Click
+
         M1(0) = 0
         M1(1) = 0
         M1ToolStripMenuItem.Text = "M1"
+
     End Sub
 
     Private Sub BorrarMemoriaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles BorrarMemoriaToolStripMenuItem1.Click
+
         M2(0) = 0
         M2(1) = 0
         M2ToolStripMenuItem.Text = "M2"
+
     End Sub
 
     Private Sub BorrarMemoriaToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles BorrarMemoriaToolStripMenuItem2.Click
+
         M3(0) = 0
         M3(1) = 0
         M3ToolStripMenuItem.Text = "M3"
+
     End Sub
 
     Private Sub BorrarMemoriaToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles BorrarMemoriaToolStripMenuItem3.Click
+
         M4(0) = 0
         M4(1) = 0
         M4ToolStripMenuItem.Text = "M4"
+
     End Sub
 
     Private Sub RestaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RestaToolStripMenuItem.Click
+
         RestaToolStripMenuItem.Checked = True
         SumaToolStripMenuItem.Checked = False
         isResta = True
@@ -132,10 +143,67 @@
     End Sub
 
     Private Sub SumaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SumaToolStripMenuItem.Click
+
         SumaToolStripMenuItem.Checked = True
         RestaToolStripMenuItem.Checked = False
         isResta = False
         OpcionesToolStripMenuItem.Text = "Modo Suma"
+
     End Sub
 
+    Private Sub ColocarEnVectorAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ColocarEnVectorAToolStripMenuItem.Click
+
+        LongA.Text = M1(0)
+        DirA.Text = M1(1)
+
+    End Sub
+
+    Private Sub ColocarEnVectorAToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ColocarEnVectorAToolStripMenuItem1.Click
+
+        LongA.Text = M2(0)
+        DirA.Text = M2(1)
+
+    End Sub
+
+    Private Sub ColocarEnVectorAToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ColocarEnVectorAToolStripMenuItem2.Click
+
+        LongA.Text = M3(0)
+        DirA.Text = M3(1)
+
+    End Sub
+
+    Private Sub ColocarEnVectorAToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ColocarEnVectorAToolStripMenuItem3.Click
+
+        LongA.Text = M4(0)
+        DirA.Text = M4(1)
+
+    End Sub
+
+    Private Sub ColocarEnVectorBToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ColocarEnVectorBToolStripMenuItem.Click
+
+        LongB.Text = M1(0)
+        DirB.Text = M1(1)
+
+    End Sub
+
+    Private Sub ColocarEnVectorBToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ColocarEnVectorBToolStripMenuItem1.Click
+
+        LongB.Text = M2(0)
+        DirB.Text = M2(1)
+
+    End Sub
+
+    Private Sub ColocarEnVectorBToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ColocarEnVectorBToolStripMenuItem2.Click
+
+        LongB.Text = M3(0)
+        DirB.Text = M3(1)
+
+    End Sub
+
+    Private Sub ColocarEnVectorBToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ColocarEnVectorBToolStripMenuItem3.Click
+
+        LongB.Text = M4(0)
+        DirB.Text = M4(1)
+
+    End Sub
 End Class
