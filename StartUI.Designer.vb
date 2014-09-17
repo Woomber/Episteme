@@ -27,8 +27,8 @@ Partial Class StartUI
         Me.CerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Joint_Launch = New System.Windows.Forms.Button()
         Me.MAINUI = New System.Windows.Forms.TableLayoutPanel()
-        Me.Vektor_Launch = New System.Windows.Forms.Button()
         Me.Qadratic_Launch = New System.Windows.Forms.Button()
+        Me.Vektor_Launch = New System.Windows.Forms.Button()
         Me.Pithagorean_Launch = New System.Windows.Forms.Button()
         Me.Rassop_Launch = New System.Windows.Forms.Button()
         Me.Arpevol_Launch = New System.Windows.Forms.Button()
@@ -37,13 +37,16 @@ Partial Class StartUI
         Me.Eqala_Launch = New System.Windows.Forms.Button()
         Me.RND_Launch = New System.Windows.Forms.Button()
         Me.Resist_Launch = New System.Windows.Forms.Button()
+        Me.ActualizaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BuscarActualizacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VersiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.MAINUI.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.ActualizaciónToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(513, 24)
@@ -61,7 +64,7 @@ Partial Class StartUI
         '
         Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
         Me.CerrarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
         Me.CerrarToolStripMenuItem.ToolTipText = "Cerrar Episteme"
         '
@@ -103,16 +106,6 @@ Partial Class StartUI
         Me.MAINUI.Size = New System.Drawing.Size(513, 223)
         Me.MAINUI.TabIndex = 4
         '
-        'Vektor_Launch
-        '
-        Me.Vektor_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Vektor_Launch.Location = New System.Drawing.Point(173, 3)
-        Me.Vektor_Launch.Name = "Vektor_Launch"
-        Me.Vektor_Launch.Size = New System.Drawing.Size(165, 49)
-        Me.Vektor_Launch.TabIndex = 2
-        Me.Vektor_Launch.Text = "Vektor" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Vr = Va + Vb"
-        Me.Vektor_Launch.UseVisualStyleBackColor = True
-        '
         'Qadratic_Launch
         '
         Me.Qadratic_Launch.Dock = System.Windows.Forms.DockStyle.Fill
@@ -122,6 +115,16 @@ Partial Class StartUI
         Me.Qadratic_Launch.TabIndex = 0
         Me.Qadratic_Launch.Text = "Qadratic" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ax^2 + bx + c"
         Me.Qadratic_Launch.UseVisualStyleBackColor = True
+        '
+        'Vektor_Launch
+        '
+        Me.Vektor_Launch.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Vektor_Launch.Location = New System.Drawing.Point(173, 3)
+        Me.Vektor_Launch.Name = "Vektor_Launch"
+        Me.Vektor_Launch.Size = New System.Drawing.Size(165, 49)
+        Me.Vektor_Launch.TabIndex = 2
+        Me.Vektor_Launch.Text = "Vektor" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Vr = Va + Vb"
+        Me.Vektor_Launch.UseVisualStyleBackColor = True
         '
         'Pithagorean_Launch
         '
@@ -211,6 +214,25 @@ Partial Class StartUI
         Me.Resist_Launch.Text = "Resist" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Rt = Ra + Rb + Rc + Rd"
         Me.Resist_Launch.UseVisualStyleBackColor = True
         '
+        'ActualizaciónToolStripMenuItem
+        '
+        Me.ActualizaciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarActualizacionesToolStripMenuItem, Me.VersiónToolStripMenuItem})
+        Me.ActualizaciónToolStripMenuItem.Name = "ActualizaciónToolStripMenuItem"
+        Me.ActualizaciónToolStripMenuItem.Size = New System.Drawing.Size(90, 20)
+        Me.ActualizaciónToolStripMenuItem.Text = "Actualización"
+        '
+        'BuscarActualizacionesToolStripMenuItem
+        '
+        Me.BuscarActualizacionesToolStripMenuItem.Name = "BuscarActualizacionesToolStripMenuItem"
+        Me.BuscarActualizacionesToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.BuscarActualizacionesToolStripMenuItem.Text = "Buscar actualizaciones"
+        '
+        'VersiónToolStripMenuItem
+        '
+        Me.VersiónToolStripMenuItem.Name = "VersiónToolStripMenuItem"
+        Me.VersiónToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.VersiónToolStripMenuItem.Text = "Versión:"
+        '
         'StartUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -244,5 +266,8 @@ Partial Class StartUI
     Friend WithEvents Eqala_Launch As System.Windows.Forms.Button
     Friend WithEvents RND_Launch As System.Windows.Forms.Button
     Friend WithEvents Resist_Launch As System.Windows.Forms.Button
+    Friend WithEvents ActualizaciónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BuscarActualizacionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents VersiónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

@@ -15,4 +15,8 @@
     Private Sub Joint_Launch_Click(sender As Object, e As EventArgs) Handles Joint_Launch.Click
         Joint.Show()
     End Sub
+
+    Private Sub StartUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        VersiónToolStripMenuItem.Text = "Versión: " & CStr(ProductVersion)
+    End Sub
 End Class
