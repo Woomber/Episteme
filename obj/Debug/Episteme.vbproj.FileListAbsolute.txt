@@ -16,3 +16,5 @@ C:\Users\Yael\Documents\GitHub\Episteme\bin\Debug\Episteme.application
 C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.exe.manifest
 C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.application
 C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.Joint.resources
+C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.RNDGen.resources
+C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.IMC.resources

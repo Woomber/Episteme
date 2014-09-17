@@ -28,8 +28,8 @@
     <MinimumRequiredVersion>1.0.0.6</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>6</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -103,10 +103,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMC.Designer.vb">
+      <DependentUpon>IMC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IMC.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Joint.Designer.vb">
       <DependentUpon>Joint.vb</DependentUpon>
     </Compile>
     <Compile Include="Joint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RND.Designer.vb">
+      <DependentUpon>RND.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RND.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StartUI.vb">
@@ -143,10 +155,17 @@
     <Compile Include="Vektor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Write.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="IMC.resx">
+      <DependentUpon>IMC.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Joint.resx">
       <DependentUpon>Joint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RND.resx">
+      <DependentUpon>RND.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartUI.resx">
       <DependentUpon>StartUI.vb</DependentUpon>

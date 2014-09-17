@@ -1,0 +1,137 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class IMC
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.Calculate = New System.Windows.Forms.Button()
+        Me.Height = New System.Windows.Forms.TextBox()
+        Me.Weight = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.RESULTA = New System.Windows.Forms.Label()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.StatusStrip1.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'Calculate
+        '
+        Me.Calculate.Font = New System.Drawing.Font("MS Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Calculate.Location = New System.Drawing.Point(12, 63)
+        Me.Calculate.Name = "Calculate"
+        Me.Calculate.Size = New System.Drawing.Size(306, 33)
+        Me.Calculate.TabIndex = 2
+        Me.Calculate.Text = "CALCULAR IMC"
+        Me.Calculate.UseVisualStyleBackColor = True
+        '
+        'Height
+        '
+        Me.Height.Location = New System.Drawing.Point(72, 6)
+        Me.Height.Name = "Height"
+        Me.Height.Size = New System.Drawing.Size(246, 20)
+        Me.Height.TabIndex = 0
+        '
+        'Weight
+        '
+        Me.Weight.Location = New System.Drawing.Point(73, 37)
+        Me.Weight.Name = "Weight"
+        Me.Weight.Size = New System.Drawing.Size(245, 20)
+        Me.Weight.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(54, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Altura (m):"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(12, 40)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(55, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Peso (kg):"
+        '
+        'RESULTA
+        '
+        Me.RESULTA.AutoSize = True
+        Me.RESULTA.Location = New System.Drawing.Point(15, 103)
+        Me.RESULTA.Name = "RESULTA"
+        Me.RESULTA.Size = New System.Drawing.Size(81, 26)
+        Me.RESULTA.TabIndex = 5
+        Me.RESULTA.Text = "Con _ m y _ kg," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "su IMC es de: _"
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 133)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(330, 22)
+        Me.StatusStrip1.TabIndex = 6
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(233, 17)
+        Me.ToolStripStatusLabel1.Text = "Copyright © Yael Arturo Chavoya Andalón"
+        '
+        'IMC
+        '
+        Me.AcceptButton = Me.Calculate
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(330, 155)
+        Me.Controls.Add(Me.StatusStrip1)
+        Me.Controls.Add(Me.RESULTA)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Weight)
+        Me.Controls.Add(Me.Height)
+        Me.Controls.Add(Me.Calculate)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(346, 194)
+        Me.MinimizeBox = False
+        Me.Name = "IMC"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "IMC-Calculator"
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+    Friend WithEvents Calculate As System.Windows.Forms.Button
+    Friend WithEvents Height As System.Windows.Forms.TextBox
+    Friend WithEvents Weight As System.Windows.Forms.TextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents RESULTA As System.Windows.Forms.Label
+    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
+    Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
+
+End Class

@@ -71,4 +71,12 @@ Public Class StartUI
     Private Sub BuscarActualizacionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BuscarActualizacionesToolStripMenuItem.Click
         InstallUpdateSyncWithInfo()
     End Sub
+
+    Private Sub RND_Launch_Click(sender As Object, e As EventArgs) Handles RND_Launch.Click
+        RNDGen.Show()
+    End Sub
+
+    Private Sub IMC_Launch_Click(sender As Object, e As EventArgs) Handles IMC_Launch.Click
+        IMC.Show()
+    End Sub
 End Class
