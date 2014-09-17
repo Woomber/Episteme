@@ -47,7 +47,7 @@ Public Class StartUI
                     End If
                 Else
                     ' Display a message that the app MUST reboot. Display the minimum required version.
-                    MessageBox.Show("Se ha detectado una apliación obligatoria de la versión " & _
+                    MessageBox.Show("Se ha detectado una apliación obligatoria " & _
                         "a la versión " & info.MinimumRequiredVersion.ToString() & _
                         ". Se instalará la actualización y se reiniciará la aplicación.", _
                         "Actualización obligatoria encontrada", MessageBoxButtons.OK, _
@@ -64,6 +64,8 @@ Public Class StartUI
                         Return
                     End Try
                 End If
+            Else
+                MessageBox.Show("No hay actualizaciones disponibles. Estás al día.", "Actualización", MessageBoxButtons.OK)
             End If
         End If
     End Sub
