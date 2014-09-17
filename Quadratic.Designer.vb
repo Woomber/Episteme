@@ -739,7 +739,7 @@ Partial Class Quadratic
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MinimumSize = New System.Drawing.Size(540, 420)
         Me.Name = "Quadratic"
-        Me.Text = "Qadratic"
+        Me.Text = "Qadratic - Funciones Cuadráticas"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)

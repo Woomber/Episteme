@@ -67,6 +67,11 @@ Partial Class Vektor
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AbrirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GuardarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnArchivoActualToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ComoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.CerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SumaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -92,11 +97,6 @@ Partial Class Vektor
         Me.ColocarEnVectorBToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.BorrarMemoriaToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AbrirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GuardarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EnArchivoActualToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ComoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.GroupBox1.SuspendLayout()
         CType(Me.CantVecA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -524,11 +524,41 @@ Partial Class Vektor
         Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.InicioToolStripMenuItem.Text = "Inicio"
         '
+        'AbrirToolStripMenuItem
+        '
+        Me.AbrirToolStripMenuItem.Name = "AbrirToolStripMenuItem"
+        Me.AbrirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AbrirToolStripMenuItem.Text = "Abrir"
+        '
+        'GuardarToolStripMenuItem
+        '
+        Me.GuardarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnArchivoActualToolStripMenuItem, Me.ComoToolStripMenuItem})
+        Me.GuardarToolStripMenuItem.Name = "GuardarToolStripMenuItem"
+        Me.GuardarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GuardarToolStripMenuItem.Text = "Guardar"
+        '
+        'EnArchivoActualToolStripMenuItem
+        '
+        Me.EnArchivoActualToolStripMenuItem.Name = "EnArchivoActualToolStripMenuItem"
+        Me.EnArchivoActualToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.EnArchivoActualToolStripMenuItem.Text = "En archivo actual"
+        '
+        'ComoToolStripMenuItem
+        '
+        Me.ComoToolStripMenuItem.Name = "ComoToolStripMenuItem"
+        Me.ComoToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ComoToolStripMenuItem.Text = "Como..."
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(149, 6)
+        '
         'CerrarToolStripMenuItem
         '
         Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
         Me.CerrarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
         '
         'OpcionesToolStripMenuItem
@@ -563,7 +593,7 @@ Partial Class Vektor
         '
         Me.M1ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColocarEnVectorAToolStripMenuItem, Me.ColocarEnVectorBToolStripMenuItem, Me.ToolStripSeparator2, Me.BorrarMemoriaToolStripMenuItem})
         Me.M1ToolStripMenuItem.Name = "M1ToolStripMenuItem"
-        Me.M1ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.M1ToolStripMenuItem.Size = New System.Drawing.Size(91, 22)
         Me.M1ToolStripMenuItem.Text = "M1"
         '
         'ColocarEnVectorAToolStripMenuItem
@@ -593,7 +623,7 @@ Partial Class Vektor
         '
         Me.M2ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColocarEnVectorAToolStripMenuItem1, Me.ColocarEnVectorBToolStripMenuItem1, Me.ToolStripSeparator3, Me.BorrarMemoriaToolStripMenuItem1})
         Me.M2ToolStripMenuItem.Name = "M2ToolStripMenuItem"
-        Me.M2ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.M2ToolStripMenuItem.Size = New System.Drawing.Size(91, 22)
         Me.M2ToolStripMenuItem.Text = "M2"
         '
         'ColocarEnVectorAToolStripMenuItem1
@@ -623,7 +653,7 @@ Partial Class Vektor
         '
         Me.M3ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColocarEnVectorAToolStripMenuItem2, Me.ColocarEnVectorBToolStripMenuItem2, Me.ToolStripSeparator4, Me.BorrarMemoriaToolStripMenuItem2})
         Me.M3ToolStripMenuItem.Name = "M3ToolStripMenuItem"
-        Me.M3ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.M3ToolStripMenuItem.Size = New System.Drawing.Size(91, 22)
         Me.M3ToolStripMenuItem.Text = "M3"
         '
         'ColocarEnVectorAToolStripMenuItem2
@@ -653,7 +683,7 @@ Partial Class Vektor
         '
         Me.M4ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColocarEnVectorAToolStripMenuItem3, Me.ColocarEnVectorBToolStripMenuItem3, Me.ToolStripSeparator5, Me.BorrarMemoriaToolStripMenuItem3})
         Me.M4ToolStripMenuItem.Name = "M4ToolStripMenuItem"
-        Me.M4ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.M4ToolStripMenuItem.Size = New System.Drawing.Size(91, 22)
         Me.M4ToolStripMenuItem.Text = "M4"
         '
         'ColocarEnVectorAToolStripMenuItem3
@@ -679,36 +709,6 @@ Partial Class Vektor
         Me.BorrarMemoriaToolStripMenuItem3.Size = New System.Drawing.Size(179, 22)
         Me.BorrarMemoriaToolStripMenuItem3.Text = "Borrar memoria"
         '
-        'AbrirToolStripMenuItem
-        '
-        Me.AbrirToolStripMenuItem.Name = "AbrirToolStripMenuItem"
-        Me.AbrirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.AbrirToolStripMenuItem.Text = "Abrir"
-        '
-        'GuardarToolStripMenuItem
-        '
-        Me.GuardarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnArchivoActualToolStripMenuItem, Me.ComoToolStripMenuItem})
-        Me.GuardarToolStripMenuItem.Name = "GuardarToolStripMenuItem"
-        Me.GuardarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.GuardarToolStripMenuItem.Text = "Guardar"
-        '
-        'EnArchivoActualToolStripMenuItem
-        '
-        Me.EnArchivoActualToolStripMenuItem.Name = "EnArchivoActualToolStripMenuItem"
-        Me.EnArchivoActualToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.EnArchivoActualToolStripMenuItem.Text = "En archivo actual"
-        '
-        'ComoToolStripMenuItem
-        '
-        Me.ComoToolStripMenuItem.Name = "ComoToolStripMenuItem"
-        Me.ComoToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.ComoToolStripMenuItem.Text = "Como..."
-        '
-        'ToolStripSeparator6
-        '
-        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(149, 6)
-        '
         'Vektor
         '
         Me.AcceptButton = Me.Calcular
@@ -722,7 +722,7 @@ Partial Class Vektor
         Me.MaximizeBox = False
         Me.MinimumSize = New System.Drawing.Size(384, 340)
         Me.Name = "Vektor"
-        Me.Text = "Vektor"
+        Me.Text = "Vektor - Suma de Vectores"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.CantVecA, System.ComponentModel.ISupportInitialize).EndInit()
