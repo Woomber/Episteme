@@ -4,7 +4,7 @@
     <PublishUrlHistory>C:\Users\Yael\Documents\GitHub\Episteme\installer\</PublishUrlHistory>
     <InstallUrlHistory>https://raw.github.com/Woomber/Episteme/master/installer/</InstallUrlHistory>
     <SupportUrlHistory />
-    <UpdateUrlHistory />
+    <UpdateUrlHistory>https://raw.github.com/Woomber/Episteme/master/installer/</UpdateUrlHistory>
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />
     <FallbackCulture>en-US</FallbackCulture>

@@ -25,6 +25,9 @@ Partial Class StartUI
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ActualizaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BuscarActualizacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VersiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Joint_Launch = New System.Windows.Forms.Button()
         Me.MAINUI = New System.Windows.Forms.TableLayoutPanel()
         Me.Qadratic_Launch = New System.Windows.Forms.Button()
@@ -37,9 +40,6 @@ Partial Class StartUI
         Me.Eqala_Launch = New System.Windows.Forms.Button()
         Me.RND_Launch = New System.Windows.Forms.Button()
         Me.Resist_Launch = New System.Windows.Forms.Button()
-        Me.ActualizaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BuscarActualizacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VersiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.MAINUI.SuspendLayout()
         Me.SuspendLayout()
@@ -64,9 +64,28 @@ Partial Class StartUI
         '
         Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
         Me.CerrarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
         Me.CerrarToolStripMenuItem.ToolTipText = "Cerrar Episteme"
+        '
+        'ActualizaciónToolStripMenuItem
+        '
+        Me.ActualizaciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarActualizacionesToolStripMenuItem, Me.VersiónToolStripMenuItem})
+        Me.ActualizaciónToolStripMenuItem.Name = "ActualizaciónToolStripMenuItem"
+        Me.ActualizaciónToolStripMenuItem.Size = New System.Drawing.Size(90, 20)
+        Me.ActualizaciónToolStripMenuItem.Text = "Actualización"
+        '
+        'BuscarActualizacionesToolStripMenuItem
+        '
+        Me.BuscarActualizacionesToolStripMenuItem.Name = "BuscarActualizacionesToolStripMenuItem"
+        Me.BuscarActualizacionesToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.BuscarActualizacionesToolStripMenuItem.Text = "Buscar actualizaciones"
+        '
+        'VersiónToolStripMenuItem
+        '
+        Me.VersiónToolStripMenuItem.Name = "VersiónToolStripMenuItem"
+        Me.VersiónToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.VersiónToolStripMenuItem.Text = "Versión:"
         '
         'Joint_Launch
         '
@@ -213,25 +232,6 @@ Partial Class StartUI
         Me.Resist_Launch.TabIndex = 11
         Me.Resist_Launch.Text = "Resist" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Rt = Ra + Rb + Rc + Rd"
         Me.Resist_Launch.UseVisualStyleBackColor = True
-        '
-        'ActualizaciónToolStripMenuItem
-        '
-        Me.ActualizaciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarActualizacionesToolStripMenuItem, Me.VersiónToolStripMenuItem})
-        Me.ActualizaciónToolStripMenuItem.Name = "ActualizaciónToolStripMenuItem"
-        Me.ActualizaciónToolStripMenuItem.Size = New System.Drawing.Size(90, 20)
-        Me.ActualizaciónToolStripMenuItem.Text = "Actualización"
-        '
-        'BuscarActualizacionesToolStripMenuItem
-        '
-        Me.BuscarActualizacionesToolStripMenuItem.Name = "BuscarActualizacionesToolStripMenuItem"
-        Me.BuscarActualizacionesToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
-        Me.BuscarActualizacionesToolStripMenuItem.Text = "Buscar actualizaciones"
-        '
-        'VersiónToolStripMenuItem
-        '
-        Me.VersiónToolStripMenuItem.Name = "VersiónToolStripMenuItem"
-        Me.VersiónToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
-        Me.VersiónToolStripMenuItem.Text = "Versión:"
         '
         'StartUI
         '

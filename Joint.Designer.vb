@@ -48,6 +48,8 @@ Partial Class Joint
         Me.EliminarA = New System.Windows.Forms.Button()
         Me.AddA = New System.Windows.Forms.TextBox()
         Me.AgregarA = New System.Windows.Forms.Button()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Esqueleto.SuspendLayout()
         Me.EsqConjU.SuspendLayout()
         Me.BaseU.SuspendLayout()
@@ -58,6 +60,7 @@ Partial Class Joint
         Me.EsqConjA.SuspendLayout()
         Me.BaseA.SuspendLayout()
         Me.OpcionesA.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Esqueleto
@@ -69,10 +72,11 @@ Partial Class Joint
         Me.Esqueleto.Controls.Add(Me.BaseOperaciones, 1, 1)
         Me.Esqueleto.Controls.Add(Me.EsqConjB, 0, 1)
         Me.Esqueleto.Controls.Add(Me.EsqConjA, 0, 0)
+        Me.Esqueleto.Controls.Add(Me.StatusStrip1, 0, 2)
         Me.Esqueleto.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Esqueleto.Location = New System.Drawing.Point(0, 0)
         Me.Esqueleto.Name = "Esqueleto"
-        Me.Esqueleto.RowCount = 2
+        Me.Esqueleto.RowCount = 3
         Me.Esqueleto.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.Esqueleto.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.Esqueleto.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
@@ -91,8 +95,8 @@ Partial Class Joint
         Me.EsqConjU.Name = "EsqConjU"
         Me.EsqConjU.RowCount = 1
         Me.EsqConjU.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.EsqConjU.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 165.0!))
-        Me.EsqConjU.Size = New System.Drawing.Size(283, 165)
+        Me.EsqConjU.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194.0!))
+        Me.EsqConjU.Size = New System.Drawing.Size(283, 155)
         Me.EsqConjU.TabIndex = 4
         '
         'U
@@ -101,7 +105,7 @@ Partial Class Joint
         Me.U.FormattingEnabled = True
         Me.U.Location = New System.Drawing.Point(3, 3)
         Me.U.Name = "U"
-        Me.U.Size = New System.Drawing.Size(135, 159)
+        Me.U.Size = New System.Drawing.Size(135, 149)
         Me.U.TabIndex = 0
         '
         'BaseU
@@ -110,7 +114,7 @@ Partial Class Joint
         Me.BaseU.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BaseU.Location = New System.Drawing.Point(144, 3)
         Me.BaseU.Name = "BaseU"
-        Me.BaseU.Size = New System.Drawing.Size(136, 159)
+        Me.BaseU.Size = New System.Drawing.Size(136, 149)
         Me.BaseU.TabIndex = 1
         Me.BaseU.TabStop = False
         Me.BaseU.Text = "Conjunto Universal"
@@ -131,15 +135,15 @@ Partial Class Joint
         Me.OpcionesU.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.OpcionesU.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.OpcionesU.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.OpcionesU.Size = New System.Drawing.Size(130, 140)
+        Me.OpcionesU.Size = New System.Drawing.Size(130, 130)
         Me.OpcionesU.TabIndex = 2
         '
         'EditarU
         '
         Me.EditarU.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.EditarU.Location = New System.Drawing.Point(3, 103)
+        Me.EditarU.Location = New System.Drawing.Point(3, 97)
         Me.EditarU.Name = "EditarU"
-        Me.EditarU.Size = New System.Drawing.Size(124, 34)
+        Me.EditarU.Size = New System.Drawing.Size(124, 30)
         Me.EditarU.TabIndex = 3
         Me.EditarU.Text = "Editar"
         Me.EditarU.UseVisualStyleBackColor = True
@@ -147,9 +151,9 @@ Partial Class Joint
         'EliminarU
         '
         Me.EliminarU.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.EliminarU.Location = New System.Drawing.Point(3, 65)
+        Me.EliminarU.Location = New System.Drawing.Point(3, 62)
         Me.EliminarU.Name = "EliminarU"
-        Me.EliminarU.Size = New System.Drawing.Size(124, 32)
+        Me.EliminarU.Size = New System.Drawing.Size(124, 29)
         Me.EliminarU.TabIndex = 2
         Me.EliminarU.Text = "Eliminar"
         Me.EliminarU.UseVisualStyleBackColor = True
@@ -167,7 +171,7 @@ Partial Class Joint
         Me.AgregarU.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AgregarU.Location = New System.Drawing.Point(3, 27)
         Me.AgregarU.Name = "AgregarU"
-        Me.AgregarU.Size = New System.Drawing.Size(124, 32)
+        Me.AgregarU.Size = New System.Drawing.Size(124, 29)
         Me.AgregarU.TabIndex = 1
         Me.AgregarU.Text = "Agregar"
         Me.AgregarU.UseVisualStyleBackColor = True
@@ -175,9 +179,9 @@ Partial Class Joint
         'BaseOperaciones
         '
         Me.BaseOperaciones.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BaseOperaciones.Location = New System.Drawing.Point(292, 174)
+        Me.BaseOperaciones.Location = New System.Drawing.Point(292, 164)
         Me.BaseOperaciones.Name = "BaseOperaciones"
-        Me.BaseOperaciones.Size = New System.Drawing.Size(283, 166)
+        Me.BaseOperaciones.Size = New System.Drawing.Size(283, 155)
         Me.BaseOperaciones.TabIndex = 3
         Me.BaseOperaciones.TabStop = False
         Me.BaseOperaciones.Text = "Operaciones"
@@ -190,12 +194,12 @@ Partial Class Joint
         Me.EsqConjB.Controls.Add(Me.B, 0, 0)
         Me.EsqConjB.Controls.Add(Me.BaseB, 1, 0)
         Me.EsqConjB.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.EsqConjB.Location = New System.Drawing.Point(3, 174)
+        Me.EsqConjB.Location = New System.Drawing.Point(3, 164)
         Me.EsqConjB.Name = "EsqConjB"
         Me.EsqConjB.RowCount = 1
         Me.EsqConjB.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.EsqConjB.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 166.0!))
-        Me.EsqConjB.Size = New System.Drawing.Size(283, 166)
+        Me.EsqConjB.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194.0!))
+        Me.EsqConjB.Size = New System.Drawing.Size(283, 155)
         Me.EsqConjB.TabIndex = 1
         '
         'B
@@ -204,7 +208,7 @@ Partial Class Joint
         Me.B.FormattingEnabled = True
         Me.B.Location = New System.Drawing.Point(3, 3)
         Me.B.Name = "B"
-        Me.B.Size = New System.Drawing.Size(135, 160)
+        Me.B.Size = New System.Drawing.Size(135, 149)
         Me.B.TabIndex = 0
         '
         'BaseB
@@ -213,7 +217,7 @@ Partial Class Joint
         Me.BaseB.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BaseB.Location = New System.Drawing.Point(144, 3)
         Me.BaseB.Name = "BaseB"
-        Me.BaseB.Size = New System.Drawing.Size(136, 160)
+        Me.BaseB.Size = New System.Drawing.Size(136, 149)
         Me.BaseB.TabIndex = 1
         Me.BaseB.TabStop = False
         Me.BaseB.Text = "Conjunto B"
@@ -234,15 +238,15 @@ Partial Class Joint
         Me.OpcionesB.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.OpcionesB.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.OpcionesB.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.OpcionesB.Size = New System.Drawing.Size(130, 141)
+        Me.OpcionesB.Size = New System.Drawing.Size(130, 130)
         Me.OpcionesB.TabIndex = 1
         '
         'EditarB
         '
         Me.EditarB.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.EditarB.Location = New System.Drawing.Point(3, 105)
+        Me.EditarB.Location = New System.Drawing.Point(3, 97)
         Me.EditarB.Name = "EditarB"
-        Me.EditarB.Size = New System.Drawing.Size(124, 33)
+        Me.EditarB.Size = New System.Drawing.Size(124, 30)
         Me.EditarB.TabIndex = 3
         Me.EditarB.Text = "Editar"
         Me.EditarB.UseVisualStyleBackColor = True
@@ -250,9 +254,9 @@ Partial Class Joint
         'EliminarB
         '
         Me.EliminarB.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.EliminarB.Location = New System.Drawing.Point(3, 66)
+        Me.EliminarB.Location = New System.Drawing.Point(3, 62)
         Me.EliminarB.Name = "EliminarB"
-        Me.EliminarB.Size = New System.Drawing.Size(124, 33)
+        Me.EliminarB.Size = New System.Drawing.Size(124, 29)
         Me.EliminarB.TabIndex = 2
         Me.EliminarB.Text = "Eliminar"
         Me.EliminarB.UseVisualStyleBackColor = True
@@ -270,7 +274,7 @@ Partial Class Joint
         Me.AgregarB.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AgregarB.Location = New System.Drawing.Point(3, 27)
         Me.AgregarB.Name = "AgregarB"
-        Me.AgregarB.Size = New System.Drawing.Size(124, 33)
+        Me.AgregarB.Size = New System.Drawing.Size(124, 29)
         Me.AgregarB.TabIndex = 1
         Me.AgregarB.Text = "Agregar"
         Me.AgregarB.UseVisualStyleBackColor = True
@@ -287,8 +291,8 @@ Partial Class Joint
         Me.EsqConjA.Name = "EsqConjA"
         Me.EsqConjA.RowCount = 1
         Me.EsqConjA.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.EsqConjA.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.EsqConjA.Size = New System.Drawing.Size(283, 165)
+        Me.EsqConjA.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194.0!))
+        Me.EsqConjA.Size = New System.Drawing.Size(283, 155)
         Me.EsqConjA.TabIndex = 0
         '
         'A
@@ -297,7 +301,7 @@ Partial Class Joint
         Me.A.FormattingEnabled = True
         Me.A.Location = New System.Drawing.Point(3, 3)
         Me.A.Name = "A"
-        Me.A.Size = New System.Drawing.Size(135, 159)
+        Me.A.Size = New System.Drawing.Size(135, 149)
         Me.A.TabIndex = 0
         '
         'BaseA
@@ -306,7 +310,7 @@ Partial Class Joint
         Me.BaseA.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BaseA.Location = New System.Drawing.Point(144, 3)
         Me.BaseA.Name = "BaseA"
-        Me.BaseA.Size = New System.Drawing.Size(136, 159)
+        Me.BaseA.Size = New System.Drawing.Size(136, 149)
         Me.BaseA.TabIndex = 1
         Me.BaseA.TabStop = False
         Me.BaseA.Text = "Conjunto A"
@@ -327,15 +331,15 @@ Partial Class Joint
         Me.OpcionesA.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.OpcionesA.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.OpcionesA.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.OpcionesA.Size = New System.Drawing.Size(130, 140)
+        Me.OpcionesA.Size = New System.Drawing.Size(130, 130)
         Me.OpcionesA.TabIndex = 0
         '
         'EditarA
         '
         Me.EditarA.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.EditarA.Location = New System.Drawing.Point(3, 103)
+        Me.EditarA.Location = New System.Drawing.Point(3, 97)
         Me.EditarA.Name = "EditarA"
-        Me.EditarA.Size = New System.Drawing.Size(124, 34)
+        Me.EditarA.Size = New System.Drawing.Size(124, 30)
         Me.EditarA.TabIndex = 3
         Me.EditarA.Text = "Editar"
         Me.EditarA.UseVisualStyleBackColor = True
@@ -343,9 +347,9 @@ Partial Class Joint
         'EliminarA
         '
         Me.EliminarA.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.EliminarA.Location = New System.Drawing.Point(3, 65)
+        Me.EliminarA.Location = New System.Drawing.Point(3, 62)
         Me.EliminarA.Name = "EliminarA"
-        Me.EliminarA.Size = New System.Drawing.Size(124, 32)
+        Me.EliminarA.Size = New System.Drawing.Size(124, 29)
         Me.EliminarA.TabIndex = 2
         Me.EliminarA.Text = "Eliminar"
         Me.EliminarA.UseVisualStyleBackColor = True
@@ -363,10 +367,26 @@ Partial Class Joint
         Me.AgregarA.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AgregarA.Location = New System.Drawing.Point(3, 27)
         Me.AgregarA.Name = "AgregarA"
-        Me.AgregarA.Size = New System.Drawing.Size(124, 32)
+        Me.AgregarA.Size = New System.Drawing.Size(124, 29)
         Me.AgregarA.TabIndex = 1
         Me.AgregarA.Text = "Agregar"
         Me.AgregarA.UseVisualStyleBackColor = True
+        '
+        'StatusStrip1
+        '
+        Me.Esqueleto.SetColumnSpan(Me.StatusStrip1, 2)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 322)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(578, 21)
+        Me.StatusStrip1.TabIndex = 5
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(260, 16)
+        Me.ToolStripStatusLabel1.Text = "Copyright © 2014 Yael Arturo Chavoya Andalón"
         '
         'Joint
         '
@@ -377,6 +397,7 @@ Partial Class Joint
         Me.Name = "Joint"
         Me.Text = "Joint"
         Me.Esqueleto.ResumeLayout(False)
+        Me.Esqueleto.PerformLayout()
         Me.EsqConjU.ResumeLayout(False)
         Me.BaseU.ResumeLayout(False)
         Me.OpcionesU.ResumeLayout(False)
@@ -389,6 +410,8 @@ Partial Class Joint
         Me.BaseA.ResumeLayout(False)
         Me.OpcionesA.ResumeLayout(False)
         Me.OpcionesA.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -418,4 +441,6 @@ Partial Class Joint
     Friend WithEvents EliminarU As System.Windows.Forms.Button
     Friend WithEvents AddU As System.Windows.Forms.TextBox
     Friend WithEvents AgregarU As System.Windows.Forms.Button
+    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
+    Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
 End Class
