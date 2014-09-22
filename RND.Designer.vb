@@ -31,21 +31,21 @@ Partial Class RNDGen
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.Estado = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Guardar = New System.Windows.Forms.Button()
         Me.Limpiar = New System.Windows.Forms.Button()
         Me.Resultados = New System.Windows.Forms.ListBox()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.Estado = New System.Windows.Forms.ToolStripStatusLabel()
         CType(Me.MinV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MaxV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Times, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Generar
@@ -78,8 +78,8 @@ Partial Class RNDGen
         'MinV
         '
         Me.MinV.Location = New System.Drawing.Point(6, 29)
-        Me.MinV.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
-        Me.MinV.Minimum = New Decimal(New Integer() {1000, 0, 0, -2147483648})
+        Me.MinV.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
+        Me.MinV.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
         Me.MinV.Name = "MinV"
         Me.MinV.Size = New System.Drawing.Size(86, 20)
         Me.MinV.TabIndex = 4
@@ -87,8 +87,8 @@ Partial Class RNDGen
         'MaxV
         '
         Me.MaxV.Location = New System.Drawing.Point(6, 65)
-        Me.MaxV.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
-        Me.MaxV.Minimum = New Decimal(New Integer() {1000, 0, 0, -2147483648})
+        Me.MaxV.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
+        Me.MaxV.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
         Me.MaxV.Name = "MaxV"
         Me.MaxV.Size = New System.Drawing.Size(86, 20)
         Me.MaxV.TabIndex = 5
@@ -96,10 +96,12 @@ Partial Class RNDGen
         'Times
         '
         Me.Times.Location = New System.Drawing.Point(6, 104)
-        Me.Times.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
+        Me.Times.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.Times.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.Times.Name = "Times"
         Me.Times.Size = New System.Drawing.Size(86, 20)
         Me.Times.TabIndex = 6
+        Me.Times.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label3
         '
@@ -143,6 +145,23 @@ Partial Class RNDGen
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 386.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(485, 289)
         Me.TableLayoutPanel1.TabIndex = 9
+        '
+        'StatusStrip1
+        '
+        Me.TableLayoutPanel1.SetColumnSpan(Me.StatusStrip1, 2)
+        Me.StatusStrip1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Estado})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 269)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(485, 20)
+        Me.StatusStrip1.TabIndex = 10
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'Estado
+        '
+        Me.Estado.Name = "Estado"
+        Me.Estado.Size = New System.Drawing.Size(61, 15)
+        Me.Estado.Text = "Preparado"
         '
         'TableLayoutPanel2
         '
@@ -202,23 +221,6 @@ Partial Class RNDGen
         Me.Resultados.TabIndex = 9
         Me.Resultados.TabStop = False
         '
-        'StatusStrip1
-        '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.StatusStrip1, 2)
-        Me.StatusStrip1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Estado})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 269)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(485, 20)
-        Me.StatusStrip1.TabIndex = 10
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'Estado
-        '
-        Me.Estado.Name = "Estado"
-        Me.Estado.Size = New System.Drawing.Size(61, 15)
-        Me.Estado.Text = "Preparado"
-        '
         'RNDGen
         '
         Me.AcceptButton = Me.Generar
@@ -236,10 +238,10 @@ Partial Class RNDGen
         Me.GroupBox1.PerformLayout()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
-        Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

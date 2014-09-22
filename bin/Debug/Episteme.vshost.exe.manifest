@@ -3,7 +3,7 @@
   <asmv1:assemblyIdentity name="Episteme.exe" version="1.0.1.12" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Episteme" version="1.0.1.11" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Episteme" version="1.0.1.12" language="neutral" processorArchitecture="msil" />
     <commandLine file="Episteme.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,13 +43,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Episteme.exe" size="187392">
-      <assemblyIdentity name="Episteme" version="1.0.1.11" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Episteme" version="1.0.1.12" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/wWQ2fpU+azaxbGjydGWdht84AiYyFCn81mixZsXoso=</dsig:DigestValue>
+        <dsig:DigestValue>MY4GgDxsTi6BoJhDQBnh38h0vKgaH3vW207JBo0dhFo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
