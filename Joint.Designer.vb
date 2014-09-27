@@ -95,7 +95,7 @@ Partial Class Joint
         Me.EsqConjU.Name = "EsqConjU"
         Me.EsqConjU.RowCount = 1
         Me.EsqConjU.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.EsqConjU.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194.0!))
+        Me.EsqConjU.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 155.0!))
         Me.EsqConjU.Size = New System.Drawing.Size(283, 155)
         Me.EsqConjU.TabIndex = 4
         '
@@ -198,7 +198,7 @@ Partial Class Joint
         Me.EsqConjB.Name = "EsqConjB"
         Me.EsqConjB.RowCount = 1
         Me.EsqConjB.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.EsqConjB.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194.0!))
+        Me.EsqConjB.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 155.0!))
         Me.EsqConjB.Size = New System.Drawing.Size(283, 155)
         Me.EsqConjB.TabIndex = 1
         '
@@ -244,6 +244,7 @@ Partial Class Joint
         'EditarB
         '
         Me.EditarB.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.EditarB.Enabled = False
         Me.EditarB.Location = New System.Drawing.Point(3, 97)
         Me.EditarB.Name = "EditarB"
         Me.EditarB.Size = New System.Drawing.Size(124, 30)
@@ -291,7 +292,7 @@ Partial Class Joint
         Me.EsqConjA.Name = "EsqConjA"
         Me.EsqConjA.RowCount = 1
         Me.EsqConjA.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.EsqConjA.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194.0!))
+        Me.EsqConjA.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 155.0!))
         Me.EsqConjA.Size = New System.Drawing.Size(283, 155)
         Me.EsqConjA.TabIndex = 0
         '
@@ -337,6 +338,7 @@ Partial Class Joint
         'EditarA
         '
         Me.EditarA.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.EditarA.Enabled = False
         Me.EditarA.Location = New System.Drawing.Point(3, 97)
         Me.EditarA.Name = "EditarA"
         Me.EditarA.Size = New System.Drawing.Size(124, 30)
