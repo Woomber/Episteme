@@ -28,7 +28,7 @@
     <MinimumRequiredVersion>1.0.1.12</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationRevision>16</ApplicationRevision>
     <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -103,6 +103,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="IMC.Designer.vb">
       <DependentUpon>IMC.vb</DependentUpon>
     </Compile>
@@ -119,6 +120,12 @@
       <DependentUpon>RND.vb</DependentUpon>
     </Compile>
     <Compile Include="RND.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.vb">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StartUI.vb">
@@ -166,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RND.resx">
       <DependentUpon>RND.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartUI.resx">
       <DependentUpon>StartUI.vb</DependentUpon>
