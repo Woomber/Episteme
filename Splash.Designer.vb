@@ -103,12 +103,12 @@ Partial Class Splash
         '
         Me.ApplicationTitle.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ApplicationTitle.BackColor = System.Drawing.Color.Transparent
-        Me.ApplicationTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ApplicationTitle.Location = New System.Drawing.Point(246, 16)
+        Me.ApplicationTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApplicationTitle.Location = New System.Drawing.Point(246, 0)
         Me.ApplicationTitle.Name = "ApplicationTitle"
-        Me.ApplicationTitle.Size = New System.Drawing.Size(247, 185)
+        Me.ApplicationTitle.Size = New System.Drawing.Size(247, 218)
         Me.ApplicationTitle.TabIndex = 0
-        Me.ApplicationTitle.Text = "Application Title"
+        Me.ApplicationTitle.Text = "Episteme"
         Me.ApplicationTitle.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Company
