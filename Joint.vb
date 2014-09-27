@@ -7,6 +7,7 @@
     Dim CA() As String
     Dim CB() As String
     Dim CU() As String
+    Dim repetidos As Boolean = False
 
     Private Sub AgregarA_Click(sender As Object, e As EventArgs) Handles AgregarA.Click
         If AddA.Text <> "" Then
@@ -121,5 +122,62 @@
         Else
             MsgBox("Por favor ponga un elemento a agregar.")
         End If
+    End Sub
+
+    Private Sub OUnion_Click(sender As Object, e As EventArgs) Handles OUnion.Click
+        R.Items.Clear()
+        j(0) = 0
+        j(1) = 0
+
+        ReDim CA(A.Items.Count - 1)
+        ReDim CB(B.Items.Count - 1)
+        For i = 0 To (A.Items.Count - 1)
+            CA(i) = CStr(A.Items(i))
+        Next
+
+        For i = 0 To (B.Items.Count - 1)
+            CB(i) = CStr(B.Items(i))
+        Next
+
+        For i = 0 To (CA.Length - 1)
+            For k = 0 To (R.Items.Count - 1)
+                If CStr(CA(i)) = CStr(R.Items(k)) Then
+                    repetidos = True
+                
+                End If
+            Next
+
+            If repetidos Then
+            Else
+                R.Items.Add(CA(i))
+            End If
+
+            repetidos = False
+            'If j(0) - R.Items.Count = 0 Then
+            'R.Items.Add(CA(i))
+            'End If
+
+        Next
+
+        For i = 0 To (CB.Length - 1)
+            For k = 0 To (R.Items.Count - 1)
+                If CStr(CB(i)) = CStr(R.Items(k)) Then
+                    repetidos = True
+
+                End If
+            Next
+
+            If repetidos Then
+            Else
+                R.Items.Add(CB(i))
+            End If
+            repetidos = False
+        ' If j(1) - R.Items.Count = 0 Then
+        'R.Items.Add(CB(i))
+        'End If
+
+        Next
+
+
     End Sub
 End Class
