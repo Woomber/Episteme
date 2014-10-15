@@ -58,7 +58,8 @@
         ElseIf IntT < 0.000001 Then
             IT.Text = "Corriente total: " & (IntT * 1000000000) & " nA"
         End If
-
+        VoltList.Items.Clear()
+        WattList.Items.Clear()
         Voltaje()
         Potencia()
         IsCalc = True
