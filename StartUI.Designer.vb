@@ -30,6 +30,7 @@ Partial Class StartUI
         Me.VersiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Joint_Launch = New System.Windows.Forms.Button()
         Me.MAINUI = New System.Windows.Forms.TableLayoutPanel()
+        Me.IMC_Launch = New System.Windows.Forms.Button()
         Me.Qadratic_Launch = New System.Windows.Forms.Button()
         Me.Vektor_Launch = New System.Windows.Forms.Button()
         Me.Pithagorean_Launch = New System.Windows.Forms.Button()
@@ -40,7 +41,6 @@ Partial Class StartUI
         Me.Eqala_Launch = New System.Windows.Forms.Button()
         Me.RND_Launch = New System.Windows.Forms.Button()
         Me.Resist_Launch = New System.Windows.Forms.Button()
-        Me.IMC_Launch = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.MAINUI.SuspendLayout()
         Me.SuspendLayout()
@@ -126,6 +126,16 @@ Partial Class StartUI
         Me.MAINUI.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.MAINUI.Size = New System.Drawing.Size(513, 223)
         Me.MAINUI.TabIndex = 4
+        '
+        'IMC_Launch
+        '
+        Me.IMC_Launch.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.IMC_Launch.Location = New System.Drawing.Point(173, 168)
+        Me.IMC_Launch.Name = "IMC_Launch"
+        Me.IMC_Launch.Size = New System.Drawing.Size(165, 52)
+        Me.IMC_Launch.TabIndex = 12
+        Me.IMC_Launch.Text = "IMC" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "kg / m^2"
+        Me.IMC_Launch.UseVisualStyleBackColor = True
         '
         'Qadratic_Launch
         '
@@ -226,23 +236,12 @@ Partial Class StartUI
         'Resist_Launch
         '
         Me.Resist_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Resist_Launch.Enabled = False
         Me.Resist_Launch.Location = New System.Drawing.Point(344, 168)
         Me.Resist_Launch.Name = "Resist_Launch"
         Me.Resist_Launch.Size = New System.Drawing.Size(166, 52)
         Me.Resist_Launch.TabIndex = 11
         Me.Resist_Launch.Text = "Resist" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Rt = Ra + Rb + Rc + Rd"
         Me.Resist_Launch.UseVisualStyleBackColor = True
-        '
-        'IMC_Launch
-        '
-        Me.IMC_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.IMC_Launch.Location = New System.Drawing.Point(173, 168)
-        Me.IMC_Launch.Name = "IMC_Launch"
-        Me.IMC_Launch.Size = New System.Drawing.Size(165, 52)
-        Me.IMC_Launch.TabIndex = 12
-        Me.IMC_Launch.Text = "IMC" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "kg / m^2"
-        Me.IMC_Launch.UseVisualStyleBackColor = True
         '
         'StartUI
         '

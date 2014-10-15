@@ -28,7 +28,7 @@
     <MinimumRequiredVersion>1.0.1.12</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>17</ApplicationRevision>
+    <ApplicationRevision>19</ApplicationRevision>
     <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -78,6 +78,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>brain.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -114,6 +117,12 @@
       <DependentUpon>Joint.vb</DependentUpon>
     </Compile>
     <Compile Include="Joint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resist.Designer.vb">
+      <DependentUpon>Resist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resist.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RND.Designer.vb">
@@ -171,6 +180,9 @@
     <EmbeddedResource Include="Joint.resx">
       <DependentUpon>Joint.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resist.resx">
+      <DependentUpon>Resist.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RND.resx">
       <DependentUpon>RND.vb</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +234,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="brain.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

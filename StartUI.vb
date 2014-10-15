@@ -81,4 +81,8 @@ Public Class StartUI
     Private Sub IMC_Launch_Click(sender As Object, e As EventArgs) Handles IMC_Launch.Click
         IMC.Show()
     End Sub
+
+    Private Sub Resist_Launch_Click(sender As Object, e As EventArgs) Handles Resist_Launch.Click
+        Resist.Show()
+    End Sub
 End Class

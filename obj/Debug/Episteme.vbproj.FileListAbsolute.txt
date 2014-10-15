@@ -19,3 +19,4 @@ C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.Joint.resources
 C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.RNDGen.resources
 C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.IMC.resources
 C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.Splash.resources
+C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.Resist.resources
