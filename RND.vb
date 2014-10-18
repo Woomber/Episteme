@@ -41,7 +41,10 @@ Public Class RNDGen
             'ListBox1.Items.CopyTo(array, 0) primer intento
             Dim fecha As String
             fecha = Format$(Now, "yyyy-mm-dd hh-mm-ss")
-            Dim FILE_NAME As String = My.Computer.FileSystem.CurrentDirectory & "\RND-" & fecha & ".txt"
+            Guardado.FileName = "RND " & fecha & ".eplog"
+
+            Guardado.ShowDialog()
+            Dim FILE_NAME As String = Guardado.FileName
             'MsgBox(FILE_NAME) lo usé para depurar
             Dim objWriter As New System.IO.StreamWriter(FILE_NAME)
             Dim i As Integer
@@ -50,8 +53,7 @@ Public Class RNDGen
                 'System.IO.File.AppendAllText(FILE_NAME, CStr(ListBox1.Items.Item(i)) & vbCrLf) también funcionaría (no probado)
             Next
             objWriter.Close()
-            MsgBox("Guardado con éxito." & vbNewLine & "Archivo: " & FILE_NAME & vbNewLine & _
-                   "Próximamente se podrá seleccionar el destino")
+            MsgBox("Guardado con éxito." & vbNewLine & "Archivo: " & FILE_NAME & vbNewLine)
         Catch ex As Exception
             MsgBox("Ha ocurrido un error.")
         End Try

@@ -85,6 +85,7 @@ Partial Class Quadratic
         Me.GuardarArchivoDeImpresiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.CerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Guardado = New System.Windows.Forms.SaveFileDialog()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -727,6 +728,10 @@ Partial Class Quadratic
         Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(230, 22)
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
         '
+        'Guardado
+        '
+        Me.Guardado.Filter = "Episteme Log|*.eplog"
+        '
         'Quadratic
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -827,5 +832,6 @@ Partial Class Quadratic
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Custom2 As System.Windows.Forms.Button
     Friend WithEvents Custom1 As System.Windows.Forms.Button
+    Friend WithEvents Guardado As System.Windows.Forms.SaveFileDialog
 
 End Class

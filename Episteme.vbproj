@@ -28,7 +28,7 @@
     <MinimumRequiredVersion>1.0.2.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -81,6 +81,9 @@
   <PropertyGroup>
     <ApplicationIcon>brain.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -106,7 +109,19 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutBox1.Designer.vb">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Editor.Designer.vb">
+      <DependentUpon>Editor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Editor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IMC.Designer.vb">
       <DependentUpon>IMC.vb</DependentUpon>
     </Compile>
@@ -117,6 +132,12 @@
       <DependentUpon>Joint.vb</DependentUpon>
     </Compile>
     <Compile Include="Joint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preferencias.Designer.vb">
+      <DependentUpon>Preferencias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Preferencias.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Resist.Designer.vb">
@@ -174,11 +195,20 @@
     <Compile Include="Write.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor.resx">
+      <DependentUpon>Editor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IMC.resx">
       <DependentUpon>IMC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Joint.resx">
       <DependentUpon>Joint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preferencias.resx">
+      <DependentUpon>Preferencias.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resist.resx">
       <DependentUpon>Resist.vb</DependentUpon>
@@ -207,6 +237,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Episteme_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -237,6 +268,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="brain.ico" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Open file.png" />
+    <None Include="Resources\Delete.png" />
     <None Include="Resources\Brain.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

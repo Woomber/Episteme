@@ -177,18 +177,22 @@
 
     Private Sub GuardarArchivoDeImpresiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarArchivoDeImpresiónToolStripMenuItem.Click
         Try
+
             Dim fecha As String
-            fecha = Format$(Now, "yyyy-MM-dd hhmmss")
-            Dim FILE_NAME As String = My.Computer.FileSystem.CurrentDirectory & "\Qadratic Log " & fecha & ".txt"
+            fecha = Format$(Now, "yyyy-mm-dd hh-mm-ss")
+            Guardado.FileName = "Qadratic " & fecha & ".eplog"
+            Guardado.ShowDialog()
+            Dim FILE_NAME As String = Guardado.FileName
+
             Dim objWriter As New System.IO.StreamWriter(FILE_NAME)
             Dim i As Integer
             For i = 0 To ListBox1.Items.Count - 1
                 objWriter.WriteLine(ListBox1.Items.Item(i))
             Next
             objWriter.Close()
-            MsgBox("Guardado con éxito en:" & vbNewLine & FILE_NAME)
+            MsgBox("Guardado con éxito." & vbNewLine & "Archivo: " & FILE_NAME & vbNewLine)
         Catch ex As Exception
-            MsgBox("Error 0x07 en 'Guardar'." & vbNewLine & "Final no esperado de la instrucción.")
+            MsgBox("Ha ocurrido un error." & vbNewLine & ex.Message)
         End Try
     End Sub
 

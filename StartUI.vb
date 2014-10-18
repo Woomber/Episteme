@@ -20,7 +20,25 @@ Public Class StartUI
 
     Private Sub StartUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         VersiónToolStripMenuItem.Text = "Versión: " & CStr(ProductVersion)
+        ChangeValues()
     End Sub
+
+    Public Sub ChangeValues()
+        If My.Settings.HombreOMujer Then
+            If My.Settings.Name = "" Or My.Settings.Name = " " Then
+                Bienvenido.Text = "Bienvenido"
+            Else
+                Bienvenido.Text = "Bienvenido, " & My.Settings.Name
+            End If
+        Else
+            If My.Settings.Name = "" Or My.Settings.Name = " " Then
+                Bienvenido.Text = "Bienvenida"
+            Else
+                Bienvenido.Text = "Bienvenida, " & My.Settings.Name
+            End If
+        End If
+    End Sub
+
     Private Sub InstallUpdateSyncWithInfo()
         Dim info As UpdateCheckInfo = Nothing
 
@@ -90,5 +108,25 @@ Public Class StartUI
 
     Private Sub Resist_Launch_Click(sender As Object, e As EventArgs) Handles Resist_Launch.Click
         Resist.Show()
+    End Sub
+
+    Private Sub AbrirArchivoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AbrirArchivoToolStripMenuItem.Click
+        Editor.Show()
+    End Sub
+
+    Private Sub AcercaDeEpistemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AcercaDeEpistemeToolStripMenuItem.Click
+        AcercaDe.Show()
+    End Sub
+
+    Private Sub PreferenciasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PreferenciasToolStripMenuItem.Click
+        Preferencias.Show()
+    End Sub
+
+    Private Sub SitioWebToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SitioWebToolStripMenuItem.Click
+        System.Diagnostics.Process.Start("http://woomber.github.io/Episteme")
+    End Sub
+
+    Private Sub VerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerToolStripMenuItem.Click
+        System.Diagnostics.Process.Start("https://github.com/Woomber/Episteme/releases")
     End Sub
 End Class

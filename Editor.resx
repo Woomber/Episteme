@@ -117,17 +117,66 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Open file" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Open file.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Brain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Brain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="StatusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="Tools.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>134, 17</value>
+  </metadata>
+  <metadata name="Abrir.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>215, 17</value>
+  </metadata>
+  <metadata name="Guardar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>293, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>38</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        /wA=
+</value>
   </data>
 </root>

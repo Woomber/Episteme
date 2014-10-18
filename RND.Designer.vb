@@ -43,6 +43,7 @@ Partial Class RNDGen
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuardarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Guardado = New System.Windows.Forms.SaveFileDialog()
         CType(Me.MinV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MaxV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Times, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -157,6 +158,7 @@ Partial Class RNDGen
         '
         'StatusStrip1
         '
+        Me.StatusStrip1.BackColor = System.Drawing.SystemColors.ControlDark
         Me.TableLayoutPanel1.SetColumnSpan(Me.StatusStrip1, 2)
         Me.StatusStrip1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Estado})
@@ -225,6 +227,7 @@ Partial Class RNDGen
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ControlDark
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -242,15 +245,21 @@ Partial Class RNDGen
         'GuardarToolStripMenuItem
         '
         Me.GuardarToolStripMenuItem.Name = "GuardarToolStripMenuItem"
-        Me.GuardarToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.GuardarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.GuardarToolStripMenuItem.Text = "Guardar"
         '
         'CerrarToolStripMenuItem
         '
         Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
         Me.CerrarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
+        '
+        'Guardado
+        '
+        Me.Guardado.Filter = """Episteme Log""|*.eplog"
+        Me.Guardado.InitialDirectory = "%userprofile%\documents"
+        Me.Guardado.Title = "Guardar archivo - RND"
         '
         'RNDGen
         '
@@ -302,5 +311,6 @@ Partial Class RNDGen
     Friend WithEvents CerrarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ContextR As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents LimpiarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Guardado As System.Windows.Forms.SaveFileDialog
 
 End Class
