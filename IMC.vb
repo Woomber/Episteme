@@ -5,7 +5,7 @@
     Dim altsq As Double = 0
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Calculate.Click
         Try
-            altura = Height.Text
+            altura = HeightP.Text
             peso = Weight.Text
             altsq = altura ^ 2
             IMC = peso / altsq

@@ -32,6 +32,8 @@ Partial Class Joint
         Me.AddU = New System.Windows.Forms.TextBox()
         Me.AgregarU = New System.Windows.Forms.Button()
         Me.BaseOperaciones = New System.Windows.Forms.GroupBox()
+        Me.EsqOp = New System.Windows.Forms.TableLayoutPanel()
+        Me.OUnion = New System.Windows.Forms.Button()
         Me.EsqConjB = New System.Windows.Forms.TableLayoutPanel()
         Me.B = New System.Windows.Forms.ListBox()
         Me.BaseB = New System.Windows.Forms.GroupBox()
@@ -52,13 +54,13 @@ Partial Class Joint
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.R = New System.Windows.Forms.ListBox()
-        Me.OUnion = New System.Windows.Forms.Button()
-        Me.EsqOp = New System.Windows.Forms.TableLayoutPanel()
+        Me.OInterseccion = New System.Windows.Forms.Button()
         Me.Esqueleto.SuspendLayout()
         Me.EsqConjU.SuspendLayout()
         Me.BaseU.SuspendLayout()
         Me.OpcionesU.SuspendLayout()
         Me.BaseOperaciones.SuspendLayout()
+        Me.EsqOp.SuspendLayout()
         Me.EsqConjB.SuspendLayout()
         Me.BaseB.SuspendLayout()
         Me.OpcionesB.SuspendLayout()
@@ -67,7 +69,6 @@ Partial Class Joint
         Me.OpcionesA.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.EsqOp.SuspendLayout()
         Me.SuspendLayout()
         '
         'Esqueleto
@@ -105,7 +106,7 @@ Partial Class Joint
         Me.EsqConjU.Name = "EsqConjU"
         Me.EsqConjU.RowCount = 1
         Me.EsqConjU.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.EsqConjU.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 155.0!))
+        Me.EsqConjU.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 137.0!))
         Me.EsqConjU.Size = New System.Drawing.Size(283, 137)
         Me.EsqConjU.TabIndex = 4
         '
@@ -198,6 +199,32 @@ Partial Class Joint
         Me.BaseOperaciones.TabStop = False
         Me.BaseOperaciones.Text = "Operaciones"
         '
+        'EsqOp
+        '
+        Me.EsqOp.ColumnCount = 1
+        Me.EsqOp.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.EsqOp.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.EsqOp.Controls.Add(Me.OInterseccion, 0, 1)
+        Me.EsqOp.Controls.Add(Me.OUnion, 0, 0)
+        Me.EsqOp.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.EsqOp.Location = New System.Drawing.Point(3, 16)
+        Me.EsqOp.Name = "EsqOp"
+        Me.EsqOp.RowCount = 2
+        Me.EsqOp.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.EsqOp.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.EsqOp.Size = New System.Drawing.Size(277, 118)
+        Me.EsqOp.TabIndex = 1
+        '
+        'OUnion
+        '
+        Me.OUnion.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.OUnion.Location = New System.Drawing.Point(3, 3)
+        Me.OUnion.Name = "OUnion"
+        Me.OUnion.Size = New System.Drawing.Size(271, 53)
+        Me.OUnion.TabIndex = 0
+        Me.OUnion.Text = "Unión"
+        Me.OUnion.UseVisualStyleBackColor = True
+        '
         'EsqConjB
         '
         Me.EsqConjB.ColumnCount = 2
@@ -210,7 +237,7 @@ Partial Class Joint
         Me.EsqConjB.Name = "EsqConjB"
         Me.EsqConjB.RowCount = 1
         Me.EsqConjB.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.EsqConjB.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 155.0!))
+        Me.EsqConjB.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 137.0!))
         Me.EsqConjB.Size = New System.Drawing.Size(283, 137)
         Me.EsqConjB.TabIndex = 1
         '
@@ -304,7 +331,7 @@ Partial Class Joint
         Me.EsqConjA.Name = "EsqConjA"
         Me.EsqConjA.RowCount = 1
         Me.EsqConjA.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.EsqConjA.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 155.0!))
+        Me.EsqConjA.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 137.0!))
         Me.EsqConjA.Size = New System.Drawing.Size(283, 137)
         Me.EsqConjA.TabIndex = 0
         '
@@ -423,30 +450,15 @@ Partial Class Joint
         Me.R.Size = New System.Drawing.Size(277, 261)
         Me.R.TabIndex = 1
         '
-        'OUnion
+        'OInterseccion
         '
-        Me.OUnion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.OUnion.Location = New System.Drawing.Point(3, 3)
-        Me.OUnion.Name = "OUnion"
-        Me.OUnion.Size = New System.Drawing.Size(271, 112)
-        Me.OUnion.TabIndex = 0
-        Me.OUnion.Text = "Unión"
-        Me.OUnion.UseVisualStyleBackColor = True
-        '
-        'EsqOp
-        '
-        Me.EsqOp.ColumnCount = 1
-        Me.EsqOp.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.EsqOp.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.EsqOp.Controls.Add(Me.OUnion, 0, 0)
-        Me.EsqOp.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.EsqOp.Location = New System.Drawing.Point(3, 16)
-        Me.EsqOp.Name = "EsqOp"
-        Me.EsqOp.RowCount = 1
-        Me.EsqOp.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.EsqOp.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.EsqOp.Size = New System.Drawing.Size(277, 118)
-        Me.EsqOp.TabIndex = 1
+        Me.OInterseccion.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.OInterseccion.Location = New System.Drawing.Point(3, 62)
+        Me.OInterseccion.Name = "OInterseccion"
+        Me.OInterseccion.Size = New System.Drawing.Size(271, 53)
+        Me.OInterseccion.TabIndex = 1
+        Me.OInterseccion.Text = "Intersección"
+        Me.OInterseccion.UseVisualStyleBackColor = True
         '
         'Joint
         '
@@ -463,6 +475,7 @@ Partial Class Joint
         Me.OpcionesU.ResumeLayout(False)
         Me.OpcionesU.PerformLayout()
         Me.BaseOperaciones.ResumeLayout(False)
+        Me.EsqOp.ResumeLayout(False)
         Me.EsqConjB.ResumeLayout(False)
         Me.BaseB.ResumeLayout(False)
         Me.OpcionesB.ResumeLayout(False)
@@ -474,7 +487,6 @@ Partial Class Joint
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
-        Me.EsqOp.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -510,4 +522,5 @@ Partial Class Joint
     Friend WithEvents R As System.Windows.Forms.ListBox
     Friend WithEvents EsqOp As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents OUnion As System.Windows.Forms.Button
+    Friend WithEvents OInterseccion As System.Windows.Forms.Button
 End Class

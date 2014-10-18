@@ -23,7 +23,7 @@ Partial Class IMC
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Calculate = New System.Windows.Forms.Button()
-        Me.Height = New System.Windows.Forms.TextBox()
+        Me.HeightP = New System.Windows.Forms.TextBox()
         Me.Weight = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -43,12 +43,12 @@ Partial Class IMC
         Me.Calculate.Text = "CALCULAR IMC"
         Me.Calculate.UseVisualStyleBackColor = True
         '
-        'Height
+        'HeightP
         '
-        Me.Height.Location = New System.Drawing.Point(72, 6)
-        Me.Height.Name = "Height"
-        Me.Height.Size = New System.Drawing.Size(246, 20)
-        Me.Height.TabIndex = 0
+        Me.HeightP.Location = New System.Drawing.Point(72, 6)
+        Me.HeightP.Name = "HeightP"
+        Me.HeightP.Size = New System.Drawing.Size(246, 20)
+        Me.HeightP.TabIndex = 0
         '
         'Weight
         '
@@ -110,7 +110,7 @@ Partial Class IMC
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Weight)
-        Me.Controls.Add(Me.Height)
+        Me.Controls.Add(Me.HeightP)
         Me.Controls.Add(Me.Calculate)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximizeBox = False
@@ -126,7 +126,7 @@ Partial Class IMC
 
     End Sub
     Friend WithEvents Calculate As System.Windows.Forms.Button
-    Friend WithEvents Height As System.Windows.Forms.TextBox
+    Friend WithEvents HeightP As System.Windows.Forms.TextBox
     Friend WithEvents Weight As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label

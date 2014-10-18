@@ -7,7 +7,8 @@
     Dim CA() As String
     Dim CB() As String
     Dim CU() As String
-    Dim repetidos As Boolean = False
+    Dim repetidos() As Boolean = {False, False}
+    Dim valores() As String = {}
 
     Private Sub AgregarA_Click(sender As Object, e As EventArgs) Handles AgregarA.Click
         If AddA.Text <> "" Then
@@ -142,17 +143,17 @@
         For i = 0 To (CA.Length - 1)
             For k = 0 To (R.Items.Count - 1)
                 If CStr(CA(i)) = CStr(R.Items(k)) Then
-                    repetidos = True
+                    repetidos(0) = True
                 
                 End If
             Next
 
-            If repetidos Then
+            If repetidos(0) Then
             Else
                 R.Items.Add(CA(i))
             End If
 
-            repetidos = False
+            repetidos(0) = False
             'If j(0) - R.Items.Count = 0 Then
             'R.Items.Add(CA(i))
             'End If
@@ -162,19 +163,60 @@
         For i = 0 To (CB.Length - 1)
             For k = 0 To (R.Items.Count - 1)
                 If CStr(CB(i)) = CStr(R.Items(k)) Then
-                    repetidos = True
+                    repetidos(0) = True
 
                 End If
             Next
 
-            If repetidos Then
+            If repetidos(0) Then
             Else
                 R.Items.Add(CB(i))
             End If
-            repetidos = False
+            repetidos(0) = False
         ' If j(1) - R.Items.Count = 0 Then
         'R.Items.Add(CB(i))
         'End If
+
+        Next
+
+
+    End Sub
+
+    Private Sub OInterseccion_Click(sender As Object, e As EventArgs) Handles OInterseccion.Click
+        R.Items.Clear()
+        ReDim valores(0)
+
+        j(0) = 0
+        j(1) = 0
+
+        ReDim CA(A.Items.Count - 1)
+        ReDim CB(B.Items.Count - 1)
+        For i = 0 To (A.Items.Count - 1)
+            CA(i) = CStr(A.Items(i))
+        Next
+
+        For i = 0 To (B.Items.Count - 1)
+            CB(i) = CStr(B.Items(i))
+        Next
+
+        For i = 0 To (CA.Length - 1)
+            For k = 0 To (CB.Length - 1)
+                If CA(i) = CB(k) Then
+                    ReDim Preserve valores(valores.Length + 1)
+                    valores(valores.Length - 1) = CB(k)
+                    Continue For
+                Else
+
+                End If
+            Next
+        Next
+
+        For i = 0 To (valores.Length - 1)
+            If valores(i) = Nothing Then
+
+            Else
+                R.Items.Add(valores(i))
+            End If
 
         Next
 

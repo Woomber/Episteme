@@ -30,10 +30,13 @@ Public Class StartUI
             Try
                 info = AD.CheckForDetailedUpdate()
             Catch dde As DeploymentDownloadException
-                MessageBox.Show("La actualización no se puede descargar por el momento. " + ControlChars.Lf & ControlChars.Lf & "Por favor revise su conexión a internet, o inténtelo más tarde. Error: " + dde.Message)
+                MessageBox.Show("La actualización no se puede descargar por el momento. " + _
+                                ControlChars.Lf & ControlChars.Lf & "Por favor revise su conexión a internet," & _
+                                " o inténtelo más tarde. Error: " + dde.Message)
                 Return
             Catch ioe As InvalidOperationException
-                MessageBox.Show("Esta aplicación no puede ser actualizada. Posiblemente no sea una aplicación ClickOnce. Error: " & ioe.Message)
+                MessageBox.Show("Esta aplicación no puede ser actualizada. Posiblemente no sea una aplicación ClickOnce." _
+                                & " Error: " & ioe.Message)
                 Return
             End Try
 
@@ -41,7 +44,9 @@ Public Class StartUI
                 Dim doUpdate As Boolean = True
 
                 If (Not info.IsUpdateRequired) Then
-                    Dim dr As DialogResult = MessageBox.Show("Hay una actualización disponible. ¿Le gustaría actualizar la aplicación ahora?", "Actualización encontrada", MessageBoxButtons.OKCancel)
+                    Dim dr As DialogResult = MessageBox.Show("Hay una actualización disponible." & _
+                                                             " ¿Le gustaría actualizar la aplicación ahora?", _
+                                                             "Actualización encontrada", MessageBoxButtons.OKCancel)
                     If (Not System.Windows.Forms.DialogResult.OK = dr) Then
                         doUpdate = False
                     End If
@@ -60,7 +65,8 @@ Public Class StartUI
                         MessageBox.Show("La aplicación se ha actualizado, ahora se reiniciará.")
                         Application.Restart()
                     Catch dde As DeploymentDownloadException
-                        MessageBox.Show("No se pudo instalar la última versión. " & ControlChars.Lf & ControlChars.Lf & "Por favor revise su conexión a internet, o inténtelo más tarde.")
+                        MessageBox.Show("No se pudo instalar la última versión. " & ControlChars.Lf & ControlChars.Lf & _
+                                        "Por favor revise su conexión a internet, o inténtelo más tarde.")
                         Return
                     End Try
                 End If
