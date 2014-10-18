@@ -17,4 +17,8 @@
         Company.Text = My.Application.Info.CompanyName
 
     End Sub
+
+    Private Sub MainLayoutPanel_Paint(sender As Object, e As PaintEventArgs) Handles MainLayoutPanel.Paint
+
+    End Sub
 End Class

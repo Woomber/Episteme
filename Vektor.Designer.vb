@@ -476,6 +476,7 @@ Partial Class Vektor
         '
         'StatusStrip1
         '
+        Me.StatusStrip1.BackColor = System.Drawing.SystemColors.ControlDark
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 279)
         Me.StatusStrip1.Name = "StatusStrip1"
@@ -510,6 +511,7 @@ Partial Class Vektor
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ControlDark
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.OpcionesToolStripMenuItem, Me.MemoriaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -527,14 +529,14 @@ Partial Class Vektor
         'AbrirToolStripMenuItem
         '
         Me.AbrirToolStripMenuItem.Name = "AbrirToolStripMenuItem"
-        Me.AbrirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AbrirToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.AbrirToolStripMenuItem.Text = "Abrir"
         '
         'GuardarToolStripMenuItem
         '
         Me.GuardarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnArchivoActualToolStripMenuItem, Me.ComoToolStripMenuItem})
         Me.GuardarToolStripMenuItem.Name = "GuardarToolStripMenuItem"
-        Me.GuardarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GuardarToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.GuardarToolStripMenuItem.Text = "Guardar"
         '
         'EnArchivoActualToolStripMenuItem
@@ -552,13 +554,13 @@ Partial Class Vektor
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(145, 6)
         '
         'CerrarToolStripMenuItem
         '
         Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
         Me.CerrarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
         '
         'OpcionesToolStripMenuItem

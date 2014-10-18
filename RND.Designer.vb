@@ -22,6 +22,7 @@ Partial Class RNDGen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Generar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -35,9 +36,13 @@ Partial Class RNDGen
         Me.Estado = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Guardar = New System.Windows.Forms.Button()
-        Me.Limpiar = New System.Windows.Forms.Button()
         Me.Resultados = New System.Windows.Forms.ListBox()
+        Me.ContextR = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.LimpiarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GuardarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.MinV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MaxV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Times, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,13 +51,17 @@ Partial Class RNDGen
         Me.StatusStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.ContextR.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Generar
         '
-        Me.Generar.Location = New System.Drawing.Point(6, 19)
+        Me.Generar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Generar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Generar.Location = New System.Drawing.Point(3, 16)
         Me.Generar.Name = "Generar"
-        Me.Generar.Size = New System.Drawing.Size(97, 21)
+        Me.Generar.Size = New System.Drawing.Size(102, 71)
         Me.Generar.TabIndex = 1
         Me.Generar.Text = "Generar"
         Me.Generar.UseVisualStyleBackColor = True
@@ -123,7 +132,7 @@ Partial Class RNDGen
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(108, 151)
+        Me.GroupBox1.Size = New System.Drawing.Size(108, 137)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Parámetros"
@@ -137,13 +146,13 @@ Partial Class RNDGen
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Resultados, 1, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 24)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 386.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(485, 289)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(485, 265)
         Me.TableLayoutPanel1.TabIndex = 9
         '
         'StatusStrip1
@@ -151,7 +160,7 @@ Partial Class RNDGen
         Me.TableLayoutPanel1.SetColumnSpan(Me.StatusStrip1, 2)
         Me.StatusStrip1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Estado})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 269)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 245)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(485, 20)
         Me.StatusStrip1.TabIndex = 10
@@ -175,51 +184,73 @@ Partial Class RNDGen
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(114, 263)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(114, 239)
         Me.TableLayoutPanel2.TabIndex = 8
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Guardar)
-        Me.GroupBox2.Controls.Add(Me.Limpiar)
         Me.GroupBox2.Controls.Add(Me.Generar)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 160)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 146)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(108, 100)
+        Me.GroupBox2.Size = New System.Drawing.Size(108, 90)
         Me.GroupBox2.TabIndex = 9
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Simulación"
         '
-        'Guardar
-        '
-        Me.Guardar.Location = New System.Drawing.Point(6, 73)
-        Me.Guardar.Name = "Guardar"
-        Me.Guardar.Size = New System.Drawing.Size(97, 21)
-        Me.Guardar.TabIndex = 3
-        Me.Guardar.Text = "Guardar"
-        Me.Guardar.UseVisualStyleBackColor = True
-        '
-        'Limpiar
-        '
-        Me.Limpiar.Location = New System.Drawing.Point(6, 46)
-        Me.Limpiar.Name = "Limpiar"
-        Me.Limpiar.Size = New System.Drawing.Size(97, 21)
-        Me.Limpiar.TabIndex = 2
-        Me.Limpiar.Text = "Limpiar"
-        Me.Limpiar.UseVisualStyleBackColor = True
-        '
         'Resultados
         '
+        Me.Resultados.ContextMenuStrip = Me.ContextR
         Me.Resultados.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Resultados.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Resultados.FormattingEnabled = True
         Me.Resultados.Items.AddRange(New Object() {"RND", "Copyright © 2014", "Yael Arturo Chavoya Andalón"})
         Me.Resultados.Location = New System.Drawing.Point(123, 3)
         Me.Resultados.Name = "Resultados"
-        Me.Resultados.Size = New System.Drawing.Size(359, 263)
+        Me.Resultados.Size = New System.Drawing.Size(359, 239)
         Me.Resultados.TabIndex = 9
         Me.Resultados.TabStop = False
+        '
+        'ContextR
+        '
+        Me.ContextR.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LimpiarToolStripMenuItem})
+        Me.ContextR.Name = "ContextR"
+        Me.ContextR.Size = New System.Drawing.Size(115, 26)
+        '
+        'LimpiarToolStripMenuItem
+        '
+        Me.LimpiarToolStripMenuItem.Name = "LimpiarToolStripMenuItem"
+        Me.LimpiarToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+        Me.LimpiarToolStripMenuItem.Text = "Limpiar"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(485, 24)
+        Me.MenuStrip1.TabIndex = 10
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'InicioToolStripMenuItem
+        '
+        Me.InicioToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GuardarToolStripMenuItem, Me.CerrarToolStripMenuItem})
+        Me.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem"
+        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
+        Me.InicioToolStripMenuItem.Text = "Inicio"
+        '
+        'GuardarToolStripMenuItem
+        '
+        Me.GuardarToolStripMenuItem.Name = "GuardarToolStripMenuItem"
+        Me.GuardarToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.GuardarToolStripMenuItem.Text = "Guardar"
+        '
+        'CerrarToolStripMenuItem
+        '
+        Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
+        Me.CerrarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.CerrarToolStripMenuItem.Text = "Cerrar"
         '
         'RNDGen
         '
@@ -228,6 +259,8 @@ Partial Class RNDGen
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(485, 289)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.MinimumSize = New System.Drawing.Size(270, 300)
         Me.Name = "RNDGen"
         Me.Text = "RND - Números aleatorios"
@@ -242,7 +275,11 @@ Partial Class RNDGen
         Me.StatusStrip1.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
+        Me.ContextR.ResumeLayout(False)
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Generar As System.Windows.Forms.Button
@@ -256,10 +293,14 @@ Partial Class RNDGen
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents Limpiar As System.Windows.Forms.Button
     Friend WithEvents Resultados As System.Windows.Forms.ListBox
-    Friend WithEvents Guardar As System.Windows.Forms.Button
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents Estado As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents InicioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GuardarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CerrarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ContextR As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents LimpiarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

@@ -97,6 +97,7 @@ Partial Class Resist
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ControlDark
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -120,6 +121,7 @@ Partial Class Resist
         '
         'StatusStrip1
         '
+        Me.StatusStrip1.BackColor = System.Drawing.SystemColors.ControlDark
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 443)
         Me.StatusStrip1.Name = "StatusStrip1"

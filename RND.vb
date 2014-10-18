@@ -31,15 +31,12 @@ Public Class RNDGen
         Next
         Estado.Text = "Preparado | Generado(s) " & time & " elemento(s)"
     End Sub
-    Private Sub Limpiar_Click(sender As Object, e As EventArgs) Handles Limpiar.Click
-        Estado.Text = "Preparado"
-        Resultados.Items.Clear()
-        Resultados.Items.Add("RND")
-        Resultados.Items.Add("Copyright © 2014")
-        Resultados.Items.Add("Yael Arturo Chavoya Andalón")
+
+    Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
+        Me.Close()
     End Sub
 
-    Private Sub Guardar_Click(sender As Object, e As EventArgs) Handles Guardar.Click
+    Private Sub GuardarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarToolStripMenuItem.Click
         Try
             'ListBox1.Items.CopyTo(array, 0) primer intento
             Dim fecha As String
@@ -53,10 +50,19 @@ Public Class RNDGen
                 'System.IO.File.AppendAllText(FILE_NAME, CStr(ListBox1.Items.Item(i)) & vbCrLf) también funcionaría (no probado)
             Next
             objWriter.Close()
-            MsgBox("Guardado con éxito." & vbNewLine & "Archivo: " & FILE_NAME)
+            MsgBox("Guardado con éxito." & vbNewLine & "Archivo: " & FILE_NAME & vbNewLine & _
+                   "Próximamente se podrá seleccionar el destino")
         Catch ex As Exception
             MsgBox("Ha ocurrido un error.")
         End Try
-
     End Sub
+
+    Private Sub LimpiarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LimpiarToolStripMenuItem.Click
+        Estado.Text = "Preparado"
+        Resultados.Items.Clear()
+        Resultados.Items.Add("RND")
+        Resultados.Items.Add("Copyright © 2014")
+        Resultados.Items.Add("Yael Arturo Chavoya Andalón")
+    End Sub
+
 End Class
