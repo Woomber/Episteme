@@ -53,6 +53,10 @@ Partial Class StartUI
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.Bienvenido = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ChemDoc_Launch = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.MAINUI.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -65,7 +69,7 @@ Partial Class StartUI
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.ActualizaciónToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(513, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(605, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -160,19 +164,22 @@ Partial Class StartUI
         'Joint_Launch
         '
         Me.Joint_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Joint_Launch.Location = New System.Drawing.Point(344, 3)
+        Me.Joint_Launch.Location = New System.Drawing.Point(305, 3)
         Me.Joint_Launch.Name = "Joint_Launch"
-        Me.Joint_Launch.Size = New System.Drawing.Size(166, 44)
+        Me.Joint_Launch.Size = New System.Drawing.Size(145, 50)
         Me.Joint_Launch.TabIndex = 3
         Me.Joint_Launch.Text = "Joint" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A U B = { x | x EA v EB }"
         Me.Joint_Launch.UseVisualStyleBackColor = True
         '
         'MAINUI
         '
-        Me.MAINUI.ColumnCount = 3
-        Me.MAINUI.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332!))
-        Me.MAINUI.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.MAINUI.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.MAINUI.ColumnCount = 4
+        Me.MAINUI.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.MAINUI.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.MAINUI.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.MAINUI.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.MAINUI.Controls.Add(Me.Button3, 3, 3)
+        Me.MAINUI.Controls.Add(Me.Button2, 3, 2)
         Me.MAINUI.Controls.Add(Me.IMC_Launch, 0, 3)
         Me.MAINUI.Controls.Add(Me.Qadratic_Launch, 0, 0)
         Me.MAINUI.Controls.Add(Me.Joint_Launch, 2, 0)
@@ -186,6 +193,8 @@ Partial Class StartUI
         Me.MAINUI.Controls.Add(Me.RND_Launch, 0, 3)
         Me.MAINUI.Controls.Add(Me.Resist_Launch, 1, 3)
         Me.MAINUI.Controls.Add(Me.Panel1, 0, 4)
+        Me.MAINUI.Controls.Add(Me.ChemDoc_Launch, 3, 0)
+        Me.MAINUI.Controls.Add(Me.Button1, 3, 1)
         Me.MAINUI.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MAINUI.Location = New System.Drawing.Point(0, 24)
         Me.MAINUI.Name = "MAINUI"
@@ -195,16 +204,15 @@ Partial Class StartUI
         Me.MAINUI.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.MAINUI.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.MAINUI.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
-        Me.MAINUI.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.MAINUI.Size = New System.Drawing.Size(513, 223)
+        Me.MAINUI.Size = New System.Drawing.Size(605, 248)
         Me.MAINUI.TabIndex = 4
         '
         'IMC_Launch
         '
         Me.IMC_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.IMC_Launch.Location = New System.Drawing.Point(173, 153)
+        Me.IMC_Launch.Location = New System.Drawing.Point(154, 171)
         Me.IMC_Launch.Name = "IMC_Launch"
-        Me.IMC_Launch.Size = New System.Drawing.Size(165, 44)
+        Me.IMC_Launch.Size = New System.Drawing.Size(145, 50)
         Me.IMC_Launch.TabIndex = 12
         Me.IMC_Launch.Text = "IMC" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "kg / m^2"
         Me.IMC_Launch.UseVisualStyleBackColor = True
@@ -214,7 +222,7 @@ Partial Class StartUI
         Me.Qadratic_Launch.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Qadratic_Launch.Location = New System.Drawing.Point(3, 3)
         Me.Qadratic_Launch.Name = "Qadratic_Launch"
-        Me.Qadratic_Launch.Size = New System.Drawing.Size(164, 44)
+        Me.Qadratic_Launch.Size = New System.Drawing.Size(145, 50)
         Me.Qadratic_Launch.TabIndex = 0
         Me.Qadratic_Launch.Text = "Qadratic" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ax^2 + bx + c"
         Me.Qadratic_Launch.UseVisualStyleBackColor = True
@@ -222,9 +230,9 @@ Partial Class StartUI
         'Vektor_Launch
         '
         Me.Vektor_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Vektor_Launch.Location = New System.Drawing.Point(173, 3)
+        Me.Vektor_Launch.Location = New System.Drawing.Point(154, 3)
         Me.Vektor_Launch.Name = "Vektor_Launch"
-        Me.Vektor_Launch.Size = New System.Drawing.Size(165, 44)
+        Me.Vektor_Launch.Size = New System.Drawing.Size(145, 50)
         Me.Vektor_Launch.TabIndex = 2
         Me.Vektor_Launch.Text = "Vektor" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Vr = Va + Vb"
         Me.Vektor_Launch.UseVisualStyleBackColor = True
@@ -233,9 +241,9 @@ Partial Class StartUI
         '
         Me.Pithagorean_Launch.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Pithagorean_Launch.Enabled = False
-        Me.Pithagorean_Launch.Location = New System.Drawing.Point(3, 53)
+        Me.Pithagorean_Launch.Location = New System.Drawing.Point(3, 59)
         Me.Pithagorean_Launch.Name = "Pithagorean_Launch"
-        Me.Pithagorean_Launch.Size = New System.Drawing.Size(164, 44)
+        Me.Pithagorean_Launch.Size = New System.Drawing.Size(145, 50)
         Me.Pithagorean_Launch.TabIndex = 4
         Me.Pithagorean_Launch.Text = "Pithagorean" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "c^2 = a^2 + b^2"
         Me.Pithagorean_Launch.UseVisualStyleBackColor = True
@@ -244,9 +252,9 @@ Partial Class StartUI
         '
         Me.Rassop_Launch.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Rassop_Launch.Enabled = False
-        Me.Rassop_Launch.Location = New System.Drawing.Point(173, 53)
+        Me.Rassop_Launch.Location = New System.Drawing.Point(154, 59)
         Me.Rassop_Launch.Name = "Rassop_Launch"
-        Me.Rassop_Launch.Size = New System.Drawing.Size(165, 44)
+        Me.Rassop_Launch.Size = New System.Drawing.Size(145, 50)
         Me.Rassop_Launch.TabIndex = 5
         Me.Rassop_Launch.Text = "Rassop" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A/B = C/D"
         Me.Rassop_Launch.UseVisualStyleBackColor = True
@@ -255,9 +263,9 @@ Partial Class StartUI
         '
         Me.Arpevol_Launch.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Arpevol_Launch.Enabled = False
-        Me.Arpevol_Launch.Location = New System.Drawing.Point(344, 53)
+        Me.Arpevol_Launch.Location = New System.Drawing.Point(305, 59)
         Me.Arpevol_Launch.Name = "Arpevol_Launch"
-        Me.Arpevol_Launch.Size = New System.Drawing.Size(166, 44)
+        Me.Arpevol_Launch.Size = New System.Drawing.Size(145, 50)
         Me.Arpevol_Launch.TabIndex = 6
         Me.Arpevol_Launch.Text = "Arpevol" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A = b x h"
         Me.Arpevol_Launch.UseVisualStyleBackColor = True
@@ -266,9 +274,9 @@ Partial Class StartUI
         '
         Me.Trigger_Launch.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Trigger_Launch.Enabled = False
-        Me.Trigger_Launch.Location = New System.Drawing.Point(3, 103)
+        Me.Trigger_Launch.Location = New System.Drawing.Point(3, 115)
         Me.Trigger_Launch.Name = "Trigger_Launch"
-        Me.Trigger_Launch.Size = New System.Drawing.Size(164, 44)
+        Me.Trigger_Launch.Size = New System.Drawing.Size(145, 50)
         Me.Trigger_Launch.TabIndex = 7
         Me.Trigger_Launch.Text = "Trigger" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "tan(45) = 1.61977519"
         Me.Trigger_Launch.UseVisualStyleBackColor = True
@@ -277,9 +285,9 @@ Partial Class StartUI
         '
         Me.NotWindowsCalc_Launch.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NotWindowsCalc_Launch.Enabled = False
-        Me.NotWindowsCalc_Launch.Location = New System.Drawing.Point(173, 103)
+        Me.NotWindowsCalc_Launch.Location = New System.Drawing.Point(154, 115)
         Me.NotWindowsCalc_Launch.Name = "NotWindowsCalc_Launch"
-        Me.NotWindowsCalc_Launch.Size = New System.Drawing.Size(165, 44)
+        Me.NotWindowsCalc_Launch.Size = New System.Drawing.Size(145, 50)
         Me.NotWindowsCalc_Launch.TabIndex = 8
         Me.NotWindowsCalc_Launch.Text = "NotWindowsCalc" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "1 + 1 = 2"
         Me.NotWindowsCalc_Launch.UseVisualStyleBackColor = True
@@ -288,9 +296,9 @@ Partial Class StartUI
         '
         Me.Eqala_Launch.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Eqala_Launch.Enabled = False
-        Me.Eqala_Launch.Location = New System.Drawing.Point(344, 103)
+        Me.Eqala_Launch.Location = New System.Drawing.Point(305, 115)
         Me.Eqala_Launch.Name = "Eqala_Launch"
-        Me.Eqala_Launch.Size = New System.Drawing.Size(166, 44)
+        Me.Eqala_Launch.Size = New System.Drawing.Size(145, 50)
         Me.Eqala_Launch.TabIndex = 9
         Me.Eqala_Launch.Text = "Eqala" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "5x + 4 = 24"
         Me.Eqala_Launch.UseVisualStyleBackColor = True
@@ -298,9 +306,9 @@ Partial Class StartUI
         'RND_Launch
         '
         Me.RND_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RND_Launch.Location = New System.Drawing.Point(3, 153)
+        Me.RND_Launch.Location = New System.Drawing.Point(3, 171)
         Me.RND_Launch.Name = "RND_Launch"
-        Me.RND_Launch.Size = New System.Drawing.Size(164, 44)
+        Me.RND_Launch.Size = New System.Drawing.Size(145, 50)
         Me.RND_Launch.TabIndex = 10
         Me.RND_Launch.Text = "RND" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "1, 4, 92, 348, 2, 50"
         Me.RND_Launch.UseVisualStyleBackColor = True
@@ -308,22 +316,22 @@ Partial Class StartUI
         'Resist_Launch
         '
         Me.Resist_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Resist_Launch.Location = New System.Drawing.Point(344, 153)
+        Me.Resist_Launch.Location = New System.Drawing.Point(305, 171)
         Me.Resist_Launch.Name = "Resist_Launch"
-        Me.Resist_Launch.Size = New System.Drawing.Size(166, 44)
+        Me.Resist_Launch.Size = New System.Drawing.Size(145, 50)
         Me.Resist_Launch.TabIndex = 11
         Me.Resist_Launch.Text = "Resist" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Rt = Ra + Rb + Rc + Rd"
         Me.Resist_Launch.UseVisualStyleBackColor = True
         '
         'Panel1
         '
-        Me.MAINUI.SetColumnSpan(Me.Panel1, 3)
+        Me.MAINUI.SetColumnSpan(Me.Panel1, 4)
         Me.Panel1.Controls.Add(Me.StatusStrip1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 200)
+        Me.Panel1.Location = New System.Drawing.Point(0, 224)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(513, 23)
+        Me.Panel1.Size = New System.Drawing.Size(605, 24)
         Me.Panel1.TabIndex = 13
         '
         'StatusStrip1
@@ -333,21 +341,64 @@ Partial Class StartUI
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Bienvenido})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 0)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(513, 23)
+        Me.StatusStrip1.Size = New System.Drawing.Size(605, 24)
         Me.StatusStrip1.TabIndex = 5
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'Bienvenido
         '
         Me.Bienvenido.Name = "Bienvenido"
-        Me.Bienvenido.Size = New System.Drawing.Size(66, 18)
+        Me.Bienvenido.Size = New System.Drawing.Size(66, 19)
         Me.Bienvenido.Text = "Bienvenido"
+        '
+        'ChemDoc_Launch
+        '
+        Me.ChemDoc_Launch.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ChemDoc_Launch.Location = New System.Drawing.Point(456, 3)
+        Me.ChemDoc_Launch.Name = "ChemDoc_Launch"
+        Me.ChemDoc_Launch.Size = New System.Drawing.Size(146, 50)
+        Me.ChemDoc_Launch.TabIndex = 14
+        Me.ChemDoc_Launch.Text = "ChemDoc" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Al + O = Al2O3"
+        Me.ChemDoc_Launch.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button1.Enabled = False
+        Me.Button1.Location = New System.Drawing.Point(456, 59)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(146, 50)
+        Me.Button1.TabIndex = 15
+        Me.Button1.Text = "-"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button2.Enabled = False
+        Me.Button2.Location = New System.Drawing.Point(456, 115)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(146, 50)
+        Me.Button2.TabIndex = 16
+        Me.Button2.Text = "-"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button3.Enabled = False
+        Me.Button3.Location = New System.Drawing.Point(456, 171)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(146, 50)
+        Me.Button3.TabIndex = 17
+        Me.Button3.Text = "-"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'StartUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(513, 247)
+        Me.ClientSize = New System.Drawing.Size(605, 272)
         Me.Controls.Add(Me.MAINUI)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -396,5 +447,9 @@ Partial Class StartUI
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents Bienvenido As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ChemDoc_Launch As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class

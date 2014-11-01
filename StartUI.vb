@@ -129,4 +129,8 @@ Public Class StartUI
     Private Sub VerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerToolStripMenuItem.Click
         System.Diagnostics.Process.Start("https://github.com/Woomber/Episteme/releases")
     End Sub
+
+    Private Sub ChemDoc_Launch_Click(sender As Object, e As EventArgs) Handles ChemDoc_Launch.Click
+        ChemDoc.Show()
+    End Sub
 End Class

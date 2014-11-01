@@ -77,6 +77,126 @@ Namespace My
                 Me("HombreOMujer") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property QadraticMin() As Integer
+            Get
+                Return CType(Me("QadraticMin"),Integer)
+            End Get
+            Set
+                Me("QadraticMin") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("9")>  _
+        Public Property QadraticMax() As Integer
+            Get
+                Return CType(Me("QadraticMax"),Integer)
+            End Get
+            Set
+                Me("QadraticMax") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property M1_L() As Double
+            Get
+                Return CType(Me("M1_L"),Double)
+            End Get
+            Set
+                Me("M1_L") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property M1_D() As Double
+            Get
+                Return CType(Me("M1_D"),Double)
+            End Get
+            Set
+                Me("M1_D") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property M2_L() As Double
+            Get
+                Return CType(Me("M2_L"),Double)
+            End Get
+            Set
+                Me("M2_L") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property M2_D() As Double
+            Get
+                Return CType(Me("M2_D"),Double)
+            End Get
+            Set
+                Me("M2_D") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property M3_L() As Double
+            Get
+                Return CType(Me("M3_L"),Double)
+            End Get
+            Set
+                Me("M3_L") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property M3_D() As Double
+            Get
+                Return CType(Me("M3_D"),Double)
+            End Get
+            Set
+                Me("M3_D") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property M4_L() As Double
+            Get
+                Return CType(Me("M4_L"),Double)
+            End Get
+            Set
+                Me("M4_L") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property M4_D() As Double
+            Get
+                Return CType(Me("M4_D"),Double)
+            End Get
+            Set
+                Me("M4_D") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

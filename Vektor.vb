@@ -3,6 +3,7 @@
     Dim Va() As Double = {0, 0, 0, 0}
     Dim Vb() As Double = {0, 0, 0, 0}
     Dim Vr() As Double = {0, 0, 0, 0}
+    'Longitud, Dirección
     Dim M1() As Double = {0, 0}
     Dim M2() As Double = {0, 0}
     Dim M3() As Double = {0, 0}
@@ -10,6 +11,31 @@
     Dim isResta As Boolean = False
     'Sin, Cos, ArcTan
     Dim Tdeg As Double = 0
+
+    Private Sub Vektor_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        M1(0) = My.Settings.M1_L
+        M1(1) = My.Settings.M1_D
+        M2(0) = My.Settings.M2_L
+        M2(1) = My.Settings.M2_D
+        M3(0) = My.Settings.M3_L
+        M3(1) = My.Settings.M3_D
+        M4(0) = My.Settings.M4_L
+        M4(1) = My.Settings.M4_D
+
+        If M1(0) <> 0 And M1(1) <> 0 Then
+            M1ToolStripMenuItem.Text = "M1: " & M1(0) & ", " & M1(1) & "°"
+        ElseIf M2(0) <> 0 And M2(1) <> 0 Then
+            M2ToolStripMenuItem.Text = "M2: " & M2(0) & ", " & M2(1) & "°"
+        ElseIf M3(0) <> 0 And M3(1) <> 0 Then
+            M3ToolStripMenuItem.Text = "M3: " & M3(0) & ", " & M3(1) & "°"
+        ElseIf M4(0) <> 0 And M4(1) <> 0 Then
+            M4ToolStripMenuItem.Text = "M4: " & M4(0) & ", " & M4(1) & "°"
+        End If
+
+    End Sub
+
+
     Private Sub Calcular_Click(sender As Object, e As EventArgs) Handles Calcular.Click
         Try
 
@@ -80,18 +106,26 @@
                 M1(0) = Vr(0)
                 M1(1) = Vr(1)
                 M1ToolStripMenuItem.Text = "M1: " & M1(0) & ", " & M1(1) & "°"
+                My.Settings.M1_L = M1(0)
+                My.Settings.M1_D = M1(1)
             ElseIf M2(0) = 0 And M2(1) = 0 Then
                 M2(0) = Vr(0)
                 M2(1) = Vr(1)
                 M2ToolStripMenuItem.Text = "M2: " & M2(0) & ", " & M2(1) & "°"
+                My.Settings.M2_L = M2(0)
+                My.Settings.M2_D = M2(1)
             ElseIf M3(0) = 0 And M3(1) = 0 Then
                 M3(0) = Vr(0)
                 M3(1) = Vr(1)
                 M3ToolStripMenuItem.Text = "M3: " & M3(0) & ", " & M3(1) & "°"
+                My.Settings.M3_L = M3(0)
+                My.Settings.M3_D = M3(1)
             ElseIf M4(0) = 0 And M4(1) = 0 Then
                 M4(0) = Vr(0)
                 M4(1) = Vr(1)
                 M4ToolStripMenuItem.Text = "M4: " & M4(0) & ", " & M4(1) & "°"
+                My.Settings.M4_L = M4(0)
+                My.Settings.M4_D = M4(1)
             Else
                 MsgBox("Memorias llenas. Borre alguna de las memorias para almacenar los datos nuevos." & vbNewLine & "M1: " & M1(0) & ", " & M1(1) & "°" & vbNewLine & "M2: " & M2(0) & ", " & M2(1) & "°" & vbNewLine & "M3: " & M3(0) & ", " & M3(1) & "°" & vbNewLine & "M4: " & M4(0) & ", " & M4(1) & "°")
             End If
@@ -106,6 +140,8 @@
         M1(0) = 0
         M1(1) = 0
         M1ToolStripMenuItem.Text = "M1"
+        My.Settings.M1_L = 0
+        My.Settings.M1_D = 0
 
     End Sub
 
@@ -114,6 +150,8 @@
         M2(0) = 0
         M2(1) = 0
         M2ToolStripMenuItem.Text = "M2"
+        My.Settings.M2_L = 0
+        My.Settings.M2_D = 0
 
     End Sub
 
@@ -122,6 +160,8 @@
         M3(0) = 0
         M3(1) = 0
         M3ToolStripMenuItem.Text = "M3"
+        My.Settings.M3_L = 0
+        My.Settings.M3_D = 0
 
     End Sub
 
@@ -130,6 +170,8 @@
         M4(0) = 0
         M4(1) = 0
         M4ToolStripMenuItem.Text = "M4"
+        My.Settings.M4_L = 0
+        My.Settings.M4_D = 0
 
     End Sub
 

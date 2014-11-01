@@ -23,3 +23,4 @@ C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.Resist.resources
 C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.Editor.resources
 C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.Preferencias.resources
 C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.AcercaDe.resources
+C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.ChemDoc.resources

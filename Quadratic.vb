@@ -9,6 +9,14 @@
     Dim rn1 As Integer = 0
     Dim rn2 As Integer = 9
 
+    Private Sub Quadratic_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Rango1.Value = My.Settings.QadraticMin
+        rn1 = My.Settings.QadraticMin
+        Rango2.Value = My.Settings.QadraticMax
+        rn2 = My.Settings.QadraticMax
+
+    End Sub
+
     Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
         Me.Close()
     End Sub
@@ -154,9 +162,11 @@
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Try
-            If Rango1.Text <= Rango2.Text Then
-                rn1 = Rango1.Text
-                rn2 = Rango2.Text
+            If Rango1.Value <= Rango2.Value Then
+                rn1 = Rango1.Value
+                My.Settings.QadraticMin = rn1
+                rn2 = Rango2.Value
+                My.Settings.QadraticMax = rn2
                 Label15.Text = "Guardado " & Format$(Now, "hh:mm:ss") & "."
                 Label15.Visible = True
             Else
@@ -167,11 +177,11 @@
         End Try
     End Sub
 
-    Private Sub Rango2_TextChanged(sender As Object, e As EventArgs) Handles Rango2.TextChanged
+    Private Sub Rango2_ValueChanged(sender As Object, e As EventArgs) Handles Rango2.ValueChanged
         Label15.Visible = False
     End Sub
 
-    Private Sub Rango1_TextChanged(sender As Object, e As EventArgs) Handles Rango1.TextChanged
+    Private Sub Rango1_ValueChanged(sender As Object, e As EventArgs) Handles Rango1.ValueChanged
         Label15.Visible = False
     End Sub
 
@@ -219,4 +229,6 @@
         Custom2.Enabled = False
         Custom1.Enabled = True
     End Sub
+
+
 End Class

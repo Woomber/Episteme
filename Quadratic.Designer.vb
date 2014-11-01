@@ -70,9 +70,7 @@ Partial Class Quadratic
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Rango2 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Rango1 = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
@@ -86,6 +84,8 @@ Partial Class Quadratic
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.CerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Guardado = New System.Windows.Forms.SaveFileDialog()
+        Me.Rango1 = New System.Windows.Forms.NumericUpDown()
+        Me.Rango2 = New System.Windows.Forms.NumericUpDown()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -102,6 +102,8 @@ Partial Class Quadratic
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.Rango1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Rango2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StatusStrip1
@@ -504,6 +506,8 @@ Partial Class Quadratic
         '
         'GroupBox5
         '
+        Me.GroupBox5.Controls.Add(Me.Rango2)
+        Me.GroupBox5.Controls.Add(Me.Rango1)
         Me.GroupBox5.Controls.Add(Me.Label15)
         Me.GroupBox5.Controls.Add(Me.Button4)
         Me.GroupBox5.Controls.Add(Me.Label14)
@@ -511,9 +515,7 @@ Partial Class Quadratic
         Me.GroupBox5.Controls.Add(Me.Button3)
         Me.GroupBox5.Controls.Add(Me.Button2)
         Me.GroupBox5.Controls.Add(Me.Button1)
-        Me.GroupBox5.Controls.Add(Me.Rango2)
         Me.GroupBox5.Controls.Add(Me.Label13)
-        Me.GroupBox5.Controls.Add(Me.Rango1)
         Me.GroupBox5.Controls.Add(Me.Label12)
         Me.GroupBox5.Controls.Add(Me.TextBox1)
         Me.GroupBox5.Controls.Add(Me.RadioButton2)
@@ -594,15 +596,6 @@ Partial Class Quadratic
         Me.Button1.Text = "Añadir"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Rango2
-        '
-        Me.Rango2.Location = New System.Drawing.Point(155, 40)
-        Me.Rango2.Name = "Rango2"
-        Me.Rango2.Size = New System.Drawing.Size(56, 20)
-        Me.Rango2.TabIndex = 6
-        Me.Rango2.Text = "9"
-        Me.Rango2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -611,15 +604,6 @@ Partial Class Quadratic
         Me.Label13.Size = New System.Drawing.Size(15, 13)
         Me.Label13.TabIndex = 5
         Me.Label13.Text = "al"
-        '
-        'Rango1
-        '
-        Me.Rango1.Location = New System.Drawing.Point(69, 40)
-        Me.Rango1.Name = "Rango1"
-        Me.Rango1.Size = New System.Drawing.Size(56, 20)
-        Me.Rango1.TabIndex = 4
-        Me.Rango1.Text = "0"
-        Me.Rango1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label12
         '
@@ -730,7 +714,27 @@ Partial Class Quadratic
         '
         'Guardado
         '
+        Me.Guardado.DefaultExt = "eplog"
         Me.Guardado.Filter = "Episteme Log|*.eplog"
+        '
+        'Rango1
+        '
+        Me.Rango1.Location = New System.Drawing.Point(69, 40)
+        Me.Rango1.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
+        Me.Rango1.Minimum = New Decimal(New Integer() {9999, 0, 0, -2147483648})
+        Me.Rango1.Name = "Rango1"
+        Me.Rango1.Size = New System.Drawing.Size(59, 20)
+        Me.Rango1.TabIndex = 13
+        '
+        'Rango2
+        '
+        Me.Rango2.Location = New System.Drawing.Point(155, 40)
+        Me.Rango2.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
+        Me.Rango2.Minimum = New Decimal(New Integer() {9999, 0, 0, -2147483648})
+        Me.Rango2.Name = "Rango2"
+        Me.Rango2.Size = New System.Drawing.Size(59, 20)
+        Me.Rango2.TabIndex = 14
+        Me.Rango2.Value = New Decimal(New Integer() {9, 0, 0, 0})
         '
         'Quadratic
         '
@@ -744,7 +748,7 @@ Partial Class Quadratic
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MinimumSize = New System.Drawing.Size(540, 420)
         Me.Name = "Quadratic"
-        Me.Text = "Qadratic - Funciones Cuadráticas"
+        Me.Text = " "
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
@@ -767,6 +771,8 @@ Partial Class Quadratic
         Me.GroupBox6.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.Rango1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Rango2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -821,9 +827,7 @@ Partial Class Quadratic
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Rango2 As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Rango1 As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
@@ -833,5 +837,7 @@ Partial Class Quadratic
     Friend WithEvents Custom2 As System.Windows.Forms.Button
     Friend WithEvents Custom1 As System.Windows.Forms.Button
     Friend WithEvents Guardado As System.Windows.Forms.SaveFileDialog
+    Friend WithEvents Rango2 As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Rango1 As System.Windows.Forms.NumericUpDown
 
 End Class
