@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Episteme.exe" size="333824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Episteme.exe" size="379904">
       <assemblyIdentity name="Episteme" version="1.0.2.3" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CODLALM6aZEPz2XT7FV1Ci+HE0UtbTLWJ4nc2jDgaNg=</dsig:DigestValue>
+        <dsig:DigestValue>61yvX8kvtu1NtnZzFuFkQ0BnDJR08A1wQszSfRZ74ZQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,13 +63,22 @@
       <dsig:DigestValue>5PjzK7kyvMVR0aXvV9pMJ0ObsaojkRXOPxAmil1mRs0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Episteme.exe.config" size="2164">
+  <file name="Elements.accdb" size="950272">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>IEIDAHhHSNCUT9oaToQRiTfxHFgLJCufWIgnmTRc5AY=</dsig:DigestValue>
+      <dsig:DigestValue>ikTKyKXpbF0Lu26URWvR7iX8JDBLGsmntXFUPx5v3YI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Episteme.exe.config" size="2429">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kpd55tbq3CIG/FL4x9YILqLtCUbz0Mshs+zhK2vCITA=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
