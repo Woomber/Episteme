@@ -131,7 +131,7 @@ Public Class StartUI
     End Sub
 
     Private Sub ChemDoc_Launch_Click(sender As Object, e As EventArgs) Handles ChemDoc_Launch.Click
-        Auth.Show()
+        Quimica.Show()
     End Sub
 
     Private Sub Numeros_Launch_Click(sender As Object, e As EventArgs) Handles Numeros_Launch.Click
