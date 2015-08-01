@@ -21,7 +21,7 @@
     <UpdateInterval>1</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>true</UpdateRequired>
+    <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>https://raw.github.com/Woomber/Episteme/master/installer/</InstallUrl>
     <UpdateUrl>https://raw.github.com/Woomber/Episteme/master/installer/</UpdateUrl>
@@ -29,10 +29,10 @@
     <ProductName>Episteme</ProductName>
     <PublisherName>Yael Arturo Chavoya Andalón</PublisherName>
     <SuiteName>Episteme</SuiteName>
-    <MinimumRequiredVersion>1.1.0.0</MinimumRequiredVersion>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Episteme.exe" size="427960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Episteme.exe" size="428984">
       <assemblyIdentity name="Episteme" version="1.1.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>J55BlHBDvcKHWrM9B+hZX3Ewam1qd5Hl1qdpoR/pFiQ=</dsig:DigestValue>
+        <dsig:DigestValue>2EyjgxBkLkM6iTr+S/R6i9feHTir8QND9J2a3fGUmlE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
