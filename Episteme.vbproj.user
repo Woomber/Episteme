@@ -3,7 +3,7 @@
   <PropertyGroup>
     <PublishUrlHistory>C:\Users\Yael\Documents\GitHub\Episteme\installer\</PublishUrlHistory>
     <InstallUrlHistory>https://raw.github.com/Woomber/Episteme/master/installer/</InstallUrlHistory>
-    <SupportUrlHistory />
+    <SupportUrlHistory>http://github.com/Woomber/Episteme/issues</SupportUrlHistory>
     <UpdateUrlHistory>https://raw.github.com/Woomber/Episteme/master/installer/</UpdateUrlHistory>
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />

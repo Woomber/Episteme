@@ -25,14 +25,10 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>https://raw.github.com/Woomber/Episteme/master/installer/</InstallUrl>
     <UpdateUrl>https://raw.github.com/Woomber/Episteme/master/installer/</UpdateUrl>
-    <SupportUrl>http://github.com/Woomber/Episteme/issues</SupportUrl>
-    <ProductName>Episteme</ProductName>
-    <PublisherName>Yael Arturo Chavoya Andalón</PublisherName>
-    <SuiteName>Episteme</SuiteName>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
