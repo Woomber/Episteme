@@ -1,6 +1,6 @@
 ﻿Public Class ChemDoc
     'Dim con As New OleDb.OleDbConnection
-    'Dim ds As New DataTable
+    'Dim ds As New DataTable 'A5E8K
     'Dim da As OleDb.OleDbDataAdapter
     'Dim sql As String
 

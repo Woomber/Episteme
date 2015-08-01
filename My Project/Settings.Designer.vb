@@ -207,6 +207,15 @@ Namespace My
                 Return CType(Me("ElementsConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("A5E8K")>  _
+        Public ReadOnly Property LogAuth() As String
+            Get
+                Return CType(Me("LogAuth"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

@@ -37,26 +37,18 @@ Partial Class StartUI
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeEpistemeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SitioWebToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Joint_Launch = New System.Windows.Forms.Button()
+        Me.Misc_Launch = New System.Windows.Forms.Button()
         Me.MAINUI = New System.Windows.Forms.TableLayoutPanel()
-        Me.IMC_Launch = New System.Windows.Forms.Button()
-        Me.Qadratic_Launch = New System.Windows.Forms.Button()
-        Me.Vektor_Launch = New System.Windows.Forms.Button()
-        Me.Pithagorean_Launch = New System.Windows.Forms.Button()
-        Me.Rassop_Launch = New System.Windows.Forms.Button()
-        Me.Arpevol_Launch = New System.Windows.Forms.Button()
-        Me.Trigger_Launch = New System.Windows.Forms.Button()
-        Me.NotWindowsCalc_Launch = New System.Windows.Forms.Button()
-        Me.Eqala_Launch = New System.Windows.Forms.Button()
-        Me.RND_Launch = New System.Windows.Forms.Button()
-        Me.Resist_Launch = New System.Windows.Forms.Button()
+        Me.Diario_Launch = New System.Windows.Forms.Button()
+        Me.Algebra_Launch = New System.Windows.Forms.Button()
+        Me.Geometria_Launch = New System.Windows.Forms.Button()
+        Me.Numeros_Launch = New System.Windows.Forms.Button()
+        Me.Juegos_Launch = New System.Windows.Forms.Button()
+        Me.Electro_Launch = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.Bienvenido = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ChemDoc_Launch = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.MAINUI.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -69,7 +61,7 @@ Partial Class StartUI
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.ActualizaciónToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(605, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(683, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -161,15 +153,15 @@ Partial Class StartUI
         Me.SitioWebToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
         Me.SitioWebToolStripMenuItem.Text = "Sitio Web"
         '
-        'Joint_Launch
+        'Misc_Launch
         '
-        Me.Joint_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Joint_Launch.Location = New System.Drawing.Point(305, 3)
-        Me.Joint_Launch.Name = "Joint_Launch"
-        Me.Joint_Launch.Size = New System.Drawing.Size(145, 50)
-        Me.Joint_Launch.TabIndex = 3
-        Me.Joint_Launch.Text = "Joint" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A U B = { x | x EA v EB }"
-        Me.Joint_Launch.UseVisualStyleBackColor = True
+        Me.Misc_Launch.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Misc_Launch.Location = New System.Drawing.Point(513, 83)
+        Me.Misc_Launch.Name = "Misc_Launch"
+        Me.Misc_Launch.Size = New System.Drawing.Size(167, 74)
+        Me.Misc_Launch.TabIndex = 3
+        Me.Misc_Launch.Text = "Misceláneos" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "De difícil agrupación"
+        Me.Misc_Launch.UseVisualStyleBackColor = True
         '
         'MAINUI
         '
@@ -178,160 +170,97 @@ Partial Class StartUI
         Me.MAINUI.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.MAINUI.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.MAINUI.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.MAINUI.Controls.Add(Me.Button3, 3, 3)
-        Me.MAINUI.Controls.Add(Me.Button2, 3, 2)
-        Me.MAINUI.Controls.Add(Me.IMC_Launch, 0, 3)
-        Me.MAINUI.Controls.Add(Me.Qadratic_Launch, 0, 0)
-        Me.MAINUI.Controls.Add(Me.Joint_Launch, 2, 0)
-        Me.MAINUI.Controls.Add(Me.Vektor_Launch, 1, 0)
-        Me.MAINUI.Controls.Add(Me.Pithagorean_Launch, 0, 1)
-        Me.MAINUI.Controls.Add(Me.Rassop_Launch, 1, 1)
-        Me.MAINUI.Controls.Add(Me.Arpevol_Launch, 2, 1)
-        Me.MAINUI.Controls.Add(Me.Trigger_Launch, 0, 2)
-        Me.MAINUI.Controls.Add(Me.NotWindowsCalc_Launch, 1, 2)
-        Me.MAINUI.Controls.Add(Me.Eqala_Launch, 2, 2)
-        Me.MAINUI.Controls.Add(Me.RND_Launch, 0, 3)
-        Me.MAINUI.Controls.Add(Me.Resist_Launch, 1, 3)
-        Me.MAINUI.Controls.Add(Me.Panel1, 0, 4)
-        Me.MAINUI.Controls.Add(Me.ChemDoc_Launch, 3, 0)
-        Me.MAINUI.Controls.Add(Me.Button1, 3, 1)
+        Me.MAINUI.Controls.Add(Me.Diario_Launch, 2, 0)
+        Me.MAINUI.Controls.Add(Me.Algebra_Launch, 0, 0)
+        Me.MAINUI.Controls.Add(Me.Misc_Launch, 3, 1)
+        Me.MAINUI.Controls.Add(Me.Geometria_Launch, 1, 0)
+        Me.MAINUI.Controls.Add(Me.Numeros_Launch, 1, 1)
+        Me.MAINUI.Controls.Add(Me.Juegos_Launch, 2, 1)
+        Me.MAINUI.Controls.Add(Me.Electro_Launch, 3, 0)
+        Me.MAINUI.Controls.Add(Me.Panel1, 0, 2)
+        Me.MAINUI.Controls.Add(Me.ChemDoc_Launch, 0, 1)
         Me.MAINUI.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MAINUI.Location = New System.Drawing.Point(0, 24)
         Me.MAINUI.Name = "MAINUI"
-        Me.MAINUI.RowCount = 5
-        Me.MAINUI.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.MAINUI.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.MAINUI.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.MAINUI.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.MAINUI.RowCount = 3
+        Me.MAINUI.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.MAINUI.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.MAINUI.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
-        Me.MAINUI.Size = New System.Drawing.Size(605, 248)
+        Me.MAINUI.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.MAINUI.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.MAINUI.Size = New System.Drawing.Size(683, 182)
         Me.MAINUI.TabIndex = 4
         '
-        'IMC_Launch
+        'Diario_Launch
         '
-        Me.IMC_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.IMC_Launch.Location = New System.Drawing.Point(154, 171)
-        Me.IMC_Launch.Name = "IMC_Launch"
-        Me.IMC_Launch.Size = New System.Drawing.Size(145, 50)
-        Me.IMC_Launch.TabIndex = 12
-        Me.IMC_Launch.Text = "IMC" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "kg / m^2"
-        Me.IMC_Launch.UseVisualStyleBackColor = True
+        Me.Diario_Launch.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Diario_Launch.Location = New System.Drawing.Point(343, 3)
+        Me.Diario_Launch.Name = "Diario_Launch"
+        Me.Diario_Launch.Size = New System.Drawing.Size(164, 74)
+        Me.Diario_Launch.TabIndex = 12
+        Me.Diario_Launch.Text = "Uso Diario" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Funciones de uso frecuente"
+        Me.Diario_Launch.UseVisualStyleBackColor = True
         '
-        'Qadratic_Launch
+        'Algebra_Launch
         '
-        Me.Qadratic_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Qadratic_Launch.Location = New System.Drawing.Point(3, 3)
-        Me.Qadratic_Launch.Name = "Qadratic_Launch"
-        Me.Qadratic_Launch.Size = New System.Drawing.Size(145, 50)
-        Me.Qadratic_Launch.TabIndex = 0
-        Me.Qadratic_Launch.Text = "Qadratic" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ax^2 + bx + c"
-        Me.Qadratic_Launch.UseVisualStyleBackColor = True
+        Me.Algebra_Launch.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Algebra_Launch.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Algebra_Launch.Location = New System.Drawing.Point(3, 3)
+        Me.Algebra_Launch.Name = "Algebra_Launch"
+        Me.Algebra_Launch.Size = New System.Drawing.Size(164, 74)
+        Me.Algebra_Launch.TabIndex = 0
+        Me.Algebra_Launch.Text = "Álgebra" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Trabaja con literales"
+        Me.Algebra_Launch.UseVisualStyleBackColor = True
         '
-        'Vektor_Launch
+        'Geometria_Launch
         '
-        Me.Vektor_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Vektor_Launch.Location = New System.Drawing.Point(154, 3)
-        Me.Vektor_Launch.Name = "Vektor_Launch"
-        Me.Vektor_Launch.Size = New System.Drawing.Size(145, 50)
-        Me.Vektor_Launch.TabIndex = 2
-        Me.Vektor_Launch.Text = "Vektor" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Vr = Va + Vb"
-        Me.Vektor_Launch.UseVisualStyleBackColor = True
+        Me.Geometria_Launch.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Geometria_Launch.Location = New System.Drawing.Point(173, 3)
+        Me.Geometria_Launch.Name = "Geometria_Launch"
+        Me.Geometria_Launch.Size = New System.Drawing.Size(164, 74)
+        Me.Geometria_Launch.TabIndex = 2
+        Me.Geometria_Launch.Text = "Geometría" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Trabaja con figuras y ángulos"
+        Me.Geometria_Launch.UseVisualStyleBackColor = True
         '
-        'Pithagorean_Launch
+        'Numeros_Launch
         '
-        Me.Pithagorean_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Pithagorean_Launch.Enabled = False
-        Me.Pithagorean_Launch.Location = New System.Drawing.Point(3, 59)
-        Me.Pithagorean_Launch.Name = "Pithagorean_Launch"
-        Me.Pithagorean_Launch.Size = New System.Drawing.Size(145, 50)
-        Me.Pithagorean_Launch.TabIndex = 4
-        Me.Pithagorean_Launch.Text = "Pithagorean" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "c^2 = a^2 + b^2"
-        Me.Pithagorean_Launch.UseVisualStyleBackColor = True
+        Me.Numeros_Launch.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Numeros_Launch.Location = New System.Drawing.Point(173, 83)
+        Me.Numeros_Launch.Name = "Numeros_Launch"
+        Me.Numeros_Launch.Size = New System.Drawing.Size(164, 74)
+        Me.Numeros_Launch.TabIndex = 5
+        Me.Numeros_Launch.Text = "Números" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Todo sobre el 123"
+        Me.Numeros_Launch.UseVisualStyleBackColor = True
         '
-        'Rassop_Launch
+        'Juegos_Launch
         '
-        Me.Rassop_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Rassop_Launch.Enabled = False
-        Me.Rassop_Launch.Location = New System.Drawing.Point(154, 59)
-        Me.Rassop_Launch.Name = "Rassop_Launch"
-        Me.Rassop_Launch.Size = New System.Drawing.Size(145, 50)
-        Me.Rassop_Launch.TabIndex = 5
-        Me.Rassop_Launch.Text = "Rassop" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A/B = C/D"
-        Me.Rassop_Launch.UseVisualStyleBackColor = True
+        Me.Juegos_Launch.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Juegos_Launch.Location = New System.Drawing.Point(343, 83)
+        Me.Juegos_Launch.Name = "Juegos_Launch"
+        Me.Juegos_Launch.Size = New System.Drawing.Size(164, 74)
+        Me.Juegos_Launch.TabIndex = 10
+        Me.Juegos_Launch.Text = "Juegos" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Despéjate un rato"
+        Me.Juegos_Launch.UseVisualStyleBackColor = True
         '
-        'Arpevol_Launch
+        'Electro_Launch
         '
-        Me.Arpevol_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Arpevol_Launch.Enabled = False
-        Me.Arpevol_Launch.Location = New System.Drawing.Point(305, 59)
-        Me.Arpevol_Launch.Name = "Arpevol_Launch"
-        Me.Arpevol_Launch.Size = New System.Drawing.Size(145, 50)
-        Me.Arpevol_Launch.TabIndex = 6
-        Me.Arpevol_Launch.Text = "Arpevol" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A = b x h"
-        Me.Arpevol_Launch.UseVisualStyleBackColor = True
-        '
-        'Trigger_Launch
-        '
-        Me.Trigger_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Trigger_Launch.Enabled = False
-        Me.Trigger_Launch.Location = New System.Drawing.Point(3, 115)
-        Me.Trigger_Launch.Name = "Trigger_Launch"
-        Me.Trigger_Launch.Size = New System.Drawing.Size(145, 50)
-        Me.Trigger_Launch.TabIndex = 7
-        Me.Trigger_Launch.Text = "Trigger" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "tan(45) = 1.61977519"
-        Me.Trigger_Launch.UseVisualStyleBackColor = True
-        '
-        'NotWindowsCalc_Launch
-        '
-        Me.NotWindowsCalc_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NotWindowsCalc_Launch.Enabled = False
-        Me.NotWindowsCalc_Launch.Location = New System.Drawing.Point(154, 115)
-        Me.NotWindowsCalc_Launch.Name = "NotWindowsCalc_Launch"
-        Me.NotWindowsCalc_Launch.Size = New System.Drawing.Size(145, 50)
-        Me.NotWindowsCalc_Launch.TabIndex = 8
-        Me.NotWindowsCalc_Launch.Text = "NotWindowsCalc" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "1 + 1 = 2"
-        Me.NotWindowsCalc_Launch.UseVisualStyleBackColor = True
-        '
-        'Eqala_Launch
-        '
-        Me.Eqala_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Eqala_Launch.Enabled = False
-        Me.Eqala_Launch.Location = New System.Drawing.Point(305, 115)
-        Me.Eqala_Launch.Name = "Eqala_Launch"
-        Me.Eqala_Launch.Size = New System.Drawing.Size(145, 50)
-        Me.Eqala_Launch.TabIndex = 9
-        Me.Eqala_Launch.Text = "Eqala" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "5x + 4 = 24"
-        Me.Eqala_Launch.UseVisualStyleBackColor = True
-        '
-        'RND_Launch
-        '
-        Me.RND_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RND_Launch.Location = New System.Drawing.Point(3, 171)
-        Me.RND_Launch.Name = "RND_Launch"
-        Me.RND_Launch.Size = New System.Drawing.Size(145, 50)
-        Me.RND_Launch.TabIndex = 10
-        Me.RND_Launch.Text = "RND" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "1, 4, 92, 348, 2, 50"
-        Me.RND_Launch.UseVisualStyleBackColor = True
-        '
-        'Resist_Launch
-        '
-        Me.Resist_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Resist_Launch.Location = New System.Drawing.Point(305, 171)
-        Me.Resist_Launch.Name = "Resist_Launch"
-        Me.Resist_Launch.Size = New System.Drawing.Size(145, 50)
-        Me.Resist_Launch.TabIndex = 11
-        Me.Resist_Launch.Text = "Resist" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Rt = Ra + Rb + Rc + Rd"
-        Me.Resist_Launch.UseVisualStyleBackColor = True
+        Me.Electro_Launch.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Electro_Launch.Location = New System.Drawing.Point(513, 3)
+        Me.Electro_Launch.Name = "Electro_Launch"
+        Me.Electro_Launch.Size = New System.Drawing.Size(167, 74)
+        Me.Electro_Launch.TabIndex = 11
+        Me.Electro_Launch.Text = "Electrónica" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Calcula esos circuitos"
+        Me.Electro_Launch.UseVisualStyleBackColor = True
         '
         'Panel1
         '
         Me.MAINUI.SetColumnSpan(Me.Panel1, 4)
         Me.Panel1.Controls.Add(Me.StatusStrip1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 224)
+        Me.Panel1.Location = New System.Drawing.Point(0, 160)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(605, 24)
+        Me.Panel1.Size = New System.Drawing.Size(683, 22)
         Me.Panel1.TabIndex = 13
         '
         'StatusStrip1
@@ -341,64 +270,31 @@ Partial Class StartUI
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Bienvenido})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 0)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(605, 24)
+        Me.StatusStrip1.Size = New System.Drawing.Size(683, 22)
         Me.StatusStrip1.TabIndex = 5
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'Bienvenido
         '
         Me.Bienvenido.Name = "Bienvenido"
-        Me.Bienvenido.Size = New System.Drawing.Size(66, 19)
+        Me.Bienvenido.Size = New System.Drawing.Size(66, 17)
         Me.Bienvenido.Text = "Bienvenido"
         '
         'ChemDoc_Launch
         '
         Me.ChemDoc_Launch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ChemDoc_Launch.Location = New System.Drawing.Point(456, 3)
+        Me.ChemDoc_Launch.Location = New System.Drawing.Point(3, 83)
         Me.ChemDoc_Launch.Name = "ChemDoc_Launch"
-        Me.ChemDoc_Launch.Size = New System.Drawing.Size(146, 50)
+        Me.ChemDoc_Launch.Size = New System.Drawing.Size(164, 74)
         Me.ChemDoc_Launch.TabIndex = 14
-        Me.ChemDoc_Launch.Text = "ChemDoc" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Al + O = Al2O3"
+        Me.ChemDoc_Launch.Text = "Química" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Mezcla los elementos"
         Me.ChemDoc_Launch.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.Enabled = False
-        Me.Button1.Location = New System.Drawing.Point(456, 59)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(146, 50)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "-"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(456, 115)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(146, 50)
-        Me.Button2.TabIndex = 16
-        Me.Button2.Text = "-"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(456, 171)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(146, 50)
-        Me.Button3.TabIndex = 17
-        Me.Button3.Text = "-"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'StartUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(605, 272)
+        Me.ClientSize = New System.Drawing.Size(683, 206)
         Me.Controls.Add(Me.MAINUI)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -419,22 +315,17 @@ Partial Class StartUI
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents InicioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CerrarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Joint_Launch As System.Windows.Forms.Button
+    Friend WithEvents Misc_Launch As System.Windows.Forms.Button
     Friend WithEvents MAINUI As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents Qadratic_Launch As System.Windows.Forms.Button
-    Friend WithEvents Vektor_Launch As System.Windows.Forms.Button
-    Friend WithEvents Pithagorean_Launch As System.Windows.Forms.Button
-    Friend WithEvents Rassop_Launch As System.Windows.Forms.Button
-    Friend WithEvents Arpevol_Launch As System.Windows.Forms.Button
-    Friend WithEvents Trigger_Launch As System.Windows.Forms.Button
-    Friend WithEvents NotWindowsCalc_Launch As System.Windows.Forms.Button
-    Friend WithEvents Eqala_Launch As System.Windows.Forms.Button
-    Friend WithEvents RND_Launch As System.Windows.Forms.Button
-    Friend WithEvents Resist_Launch As System.Windows.Forms.Button
+    Friend WithEvents Algebra_Launch As System.Windows.Forms.Button
+    Friend WithEvents Geometria_Launch As System.Windows.Forms.Button
+    Friend WithEvents Numeros_Launch As System.Windows.Forms.Button
+    Friend WithEvents Juegos_Launch As System.Windows.Forms.Button
+    Friend WithEvents Electro_Launch As System.Windows.Forms.Button
     Friend WithEvents ActualizaciónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BuscarActualizacionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VersiónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents IMC_Launch As System.Windows.Forms.Button
+    Friend WithEvents Diario_Launch As System.Windows.Forms.Button
     Friend WithEvents AbrirArchivoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
@@ -448,8 +339,5 @@ Partial Class StartUI
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents Bienvenido As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ChemDoc_Launch As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class

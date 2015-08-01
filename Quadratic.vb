@@ -10,6 +10,7 @@
     Dim rn2 As Integer = 9
 
     Private Sub Quadratic_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Carga los valores almacenados en la configuración
         Rango1.Value = My.Settings.QadraticMin
         rn1 = My.Settings.QadraticMin
         Rango2.Value = My.Settings.QadraticMax

@@ -63,6 +63,8 @@ Partial Class Quadratic
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Rango2 = New System.Windows.Forms.NumericUpDown()
+        Me.Rango1 = New System.Windows.Forms.NumericUpDown()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -84,8 +86,6 @@ Partial Class Quadratic
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.CerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Guardado = New System.Windows.Forms.SaveFileDialog()
-        Me.Rango1 = New System.Windows.Forms.NumericUpDown()
-        Me.Rango2 = New System.Windows.Forms.NumericUpDown()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -100,10 +100,10 @@ Partial Class Quadratic
         Me.TabPage2.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
+        CType(Me.Rango2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Rango1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox6.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.Rango1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Rango2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StatusStrip1
@@ -529,6 +529,25 @@ Partial Class Quadratic
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Opciones de impresión"
         '
+        'Rango2
+        '
+        Me.Rango2.Location = New System.Drawing.Point(155, 40)
+        Me.Rango2.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
+        Me.Rango2.Minimum = New Decimal(New Integer() {9999, 0, 0, -2147483648})
+        Me.Rango2.Name = "Rango2"
+        Me.Rango2.Size = New System.Drawing.Size(59, 20)
+        Me.Rango2.TabIndex = 14
+        Me.Rango2.Value = New Decimal(New Integer() {9, 0, 0, 0})
+        '
+        'Rango1
+        '
+        Me.Rango1.Location = New System.Drawing.Point(69, 40)
+        Me.Rango1.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
+        Me.Rango1.Minimum = New Decimal(New Integer() {9999, 0, 0, -2147483648})
+        Me.Rango1.Name = "Rango1"
+        Me.Rango1.Size = New System.Drawing.Size(59, 20)
+        Me.Rango1.TabIndex = 13
+        '
         'Label15
         '
         Me.Label15.AutoSize = True
@@ -717,25 +736,6 @@ Partial Class Quadratic
         Me.Guardado.DefaultExt = "eplog"
         Me.Guardado.Filter = "Episteme Log|*.eplog"
         '
-        'Rango1
-        '
-        Me.Rango1.Location = New System.Drawing.Point(69, 40)
-        Me.Rango1.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
-        Me.Rango1.Minimum = New Decimal(New Integer() {9999, 0, 0, -2147483648})
-        Me.Rango1.Name = "Rango1"
-        Me.Rango1.Size = New System.Drawing.Size(59, 20)
-        Me.Rango1.TabIndex = 13
-        '
-        'Rango2
-        '
-        Me.Rango2.Location = New System.Drawing.Point(155, 40)
-        Me.Rango2.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
-        Me.Rango2.Minimum = New Decimal(New Integer() {9999, 0, 0, -2147483648})
-        Me.Rango2.Name = "Rango2"
-        Me.Rango2.Size = New System.Drawing.Size(59, 20)
-        Me.Rango2.TabIndex = 14
-        Me.Rango2.Value = New Decimal(New Integer() {9, 0, 0, 0})
-        '
         'Quadratic
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -748,7 +748,7 @@ Partial Class Quadratic
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MinimumSize = New System.Drawing.Size(540, 420)
         Me.Name = "Quadratic"
-        Me.Text = " "
+        Me.Text = " Qadratic"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
@@ -768,11 +768,11 @@ Partial Class Quadratic
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
+        CType(Me.Rango2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Rango1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox6.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.Rango1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Rango2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

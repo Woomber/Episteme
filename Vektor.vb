@@ -38,16 +38,30 @@
 
     Private Sub Calcular_Click(sender As Object, e As EventArgs) Handles Calcular.Click
         Try
-
+            '0 longitud, 1 dirección, 2 x, 3 y
             Va(0) = CInt(CantVecA.Value) * CDbl(LongA.Text)
             Va(1) = CDbl(DirA.Text)
             Vb(0) = CInt(CantVecB.Value) * CDbl(LongB.Text)
             Vb(1) = CDbl(DirB.Text)
-
+           
             Va(2) = Va(0) * Math.Cos((Math.PI / 180) * Va(1))
             Va(3) = Va(0) * Math.Sin((Math.PI / 180) * Va(1))
             Vb(2) = Vb(0) * Math.Cos((Math.PI / 180) * Vb(1))
             Vb(3) = Vb(0) * Math.Sin((Math.PI / 180) * Vb(1))
+
+            For i = 2 to 3
+                If (Va(i) < 0.000000001 And Va(i) >= 0) Or (Va(i) <= 0 And Va(i) > -0.000000001) Then
+                    Va(i) = 0
+                End If
+            Next
+
+            For i = 2 to 3
+                If (Vb(i) < 0.000000001 And Vb(i) >= 0) Or (Vb(i) <= 0 And Vb(i) > -0.000000001) Then
+                    Vb(i) = 0
+                End If
+            Next
+
+
             If isResta = 0 Then
                 Vr(2) = Va(2) + Vb(2)
                 Vr(3) = Va(3) + Vb(3)
@@ -56,8 +70,12 @@
                 Vr(3) = Va(3) - Vb(3)
             End If
             Vr(0) = Math.Sqrt((Vr(2) ^ 2) + (Vr(3) ^ 2))
+            If Vr(2) = 0 Then
+                Tdeg = 90
+            Else
+                Tdeg = (180 / Math.PI) * Math.Atan(Vr(3) / Vr(2))
+            End If
 
-            Tdeg = (180 / Math.PI) * Math.Atan(Vr(3) / Vr(2))
             'MsgBox(Tdeg)
 
             If Vr(2) >= 0 And Vr(3) >= 0 Then

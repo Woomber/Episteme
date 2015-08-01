@@ -2,20 +2,20 @@
 
 Public Class StartUI
 
-    Private Sub Qadratic_Launch_Click(sender As Object, e As EventArgs) Handles Qadratic_Launch.Click
-        Quadratic.Show()
+    Private Sub Algebra_Launch_Click(sender As Object, e As EventArgs) Handles Algebra_Launch.Click
+        Algebra.Show()
     End Sub
 
-    Private Sub Vektor_Launch_Click(sender As Object, e As EventArgs) Handles Vektor_Launch.Click
-        Vektor.Show()
+    Private Sub Geometria_Launch_Click(sender As Object, e As EventArgs) Handles Geometria_Launch.Click
+        Geometria.Show()
     End Sub
 
     Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
         Me.Close()
     End Sub
 
-    Private Sub Joint_Launch_Click(sender As Object, e As EventArgs) Handles Joint_Launch.Click
-        Joint.Show()
+    Private Sub Misc_Launch_Click(sender As Object, e As EventArgs) Handles Misc_Launch.Click
+        Misc.Show()
     End Sub
 
     Private Sub StartUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -98,16 +98,16 @@ Public Class StartUI
         InstallUpdateSyncWithInfo()
     End Sub
 
-    Private Sub RND_Launch_Click(sender As Object, e As EventArgs) Handles RND_Launch.Click
-        RNDGen.Show()
+    Private Sub Juegos_Launch_Click(sender As Object, e As EventArgs) Handles Juegos_Launch.Click
+        Juegos.Show()
     End Sub
 
-    Private Sub IMC_Launch_Click(sender As Object, e As EventArgs) Handles IMC_Launch.Click
-        IMC.Show()
+    Private Sub Diario_Launch_Click(sender As Object, e As EventArgs) Handles Diario_Launch.Click
+        Diario.Show()
     End Sub
 
-    Private Sub Resist_Launch_Click(sender As Object, e As EventArgs) Handles Resist_Launch.Click
-        Resist.Show()
+    Private Sub Electro_Launch_Click(sender As Object, e As EventArgs) Handles Electro_Launch.Click
+        Electro.Show()
     End Sub
 
     Private Sub AbrirArchivoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AbrirArchivoToolStripMenuItem.Click
@@ -131,6 +131,10 @@ Public Class StartUI
     End Sub
 
     Private Sub ChemDoc_Launch_Click(sender As Object, e As EventArgs) Handles ChemDoc_Launch.Click
-        ChemDoc.Show()
+        Auth.Show()
+    End Sub
+
+    Private Sub Numeros_Launch_Click(sender As Object, e As EventArgs) Handles Numeros_Launch.Click
+        Numeros.Show()
     End Sub
 End Class

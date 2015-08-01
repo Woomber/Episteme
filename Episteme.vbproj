@@ -25,11 +25,15 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>https://raw.github.com/Woomber/Episteme/master/installer/</InstallUrl>
     <UpdateUrl>https://raw.github.com/Woomber/Episteme/master/installer/</UpdateUrl>
-    <MinimumRequiredVersion>1.0.2.0</MinimumRequiredVersion>
+    <SupportUrl>http://github.com/Woomber/Episteme/issues</SupportUrl>
+    <ProductName>Episteme</ProductName>
+    <PublisherName>Yael Arturo Chavoya Andalón</PublisherName>
+    <SuiteName>Episteme</SuiteName>
+    <MinimumRequiredVersion>1.1.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>4</ApplicationRevision>
-    <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -115,6 +119,60 @@
     <Compile Include="AboutBox1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IsPrime.Designer.vb">
+      <DependentUpon>IsPrime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IsPrime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc.Designer.vb">
+      <DependentUpon>Misc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Misc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Juegos.Designer.vb">
+      <DependentUpon>Juegos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Juegos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Numeros.Designer.vb">
+      <DependentUpon>Numeros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Numeros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quimica.Designer.vb">
+      <DependentUpon>Quimica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quimica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Electro.Designer.vb">
+      <DependentUpon>Electro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Electro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diario.Designer.vb">
+      <DependentUpon>Diario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Diario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geometria.Designer.vb">
+      <DependentUpon>Geometria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Geometria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Algebra.Designer.vb">
+      <DependentUpon>Algebra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Algebra.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="ChemDoc.Designer.vb">
       <DependentUpon>ChemDoc.vb</DependentUpon>
@@ -132,6 +190,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ElementsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Auth.Designer.vb">
+      <DependentUpon>Auth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Auth.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="IMC.Designer.vb">
       <DependentUpon>IMC.vb</DependentUpon>
@@ -209,11 +273,41 @@
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IsPrime.resx">
+      <DependentUpon>IsPrime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc.resx">
+      <DependentUpon>Misc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Juegos.resx">
+      <DependentUpon>Juegos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Numeros.resx">
+      <DependentUpon>Numeros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quimica.resx">
+      <DependentUpon>Quimica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Electro.resx">
+      <DependentUpon>Electro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diario.resx">
+      <DependentUpon>Diario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geometria.resx">
+      <DependentUpon>Geometria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Algebra.resx">
+      <DependentUpon>Algebra.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChemDoc.resx">
       <DependentUpon>ChemDoc.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editor.resx">
       <DependentUpon>Editor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auth.resx">
+      <DependentUpon>Auth.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IMC.resx">
       <DependentUpon>IMC.vb</DependentUpon>
