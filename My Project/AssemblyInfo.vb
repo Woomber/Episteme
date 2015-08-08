@@ -14,7 +14,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Cálculos hechos simples")> 
 <Assembly: AssemblyCompany("Yael Arturo Chavoya Andalón")> 
 <Assembly: AssemblyProduct("Episteme")> 
-<Assembly: AssemblyCopyright("Copyright © 2014")> 
+<Assembly: AssemblyCopyright("Copyright © 2014 - 2015")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(True)> 
@@ -33,7 +33,7 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.1.0.3")> 
-<Assembly: AssemblyFileVersion("1.1.0.3")> 
+<Assembly: AssemblyVersion("1.1.0.5")> 
+<Assembly: AssemblyFileVersion("1.1.0.5")> 
 
 <Assembly: NeutralResourcesLanguageAttribute("es-MX")> 

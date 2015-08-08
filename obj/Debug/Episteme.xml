@@ -19,6 +19,10 @@ Episteme
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Episteme.My.Resources.Resources.brain1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+</summary>
 </member><member name="P:Episteme.My.Resources.Resources.Delete">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
