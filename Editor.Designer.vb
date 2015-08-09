@@ -27,8 +27,17 @@ Partial Class Editor
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Tools = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.Nuevo = New System.Windows.Forms.ToolStripButton()
+        Me.AbrirArchivo = New System.Windows.Forms.ToolStripButton()
+        Me.GuardarArchivo = New System.Windows.Forms.ToolStripButton()
+        Me.GuardarComo = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.Edicion = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.CortarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopiarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PegarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CerrarEditor = New System.Windows.Forms.ToolStripButton()
         Me.Abrir = New System.Windows.Forms.OpenFileDialog()
         Me.AreaTexto = New System.Windows.Forms.TextBox()
         Me.Guardar = New System.Windows.Forms.SaveFileDialog()
@@ -61,7 +70,7 @@ Partial Class Editor
         'Tools
         '
         Me.Tools.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.Tools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2})
+        Me.Tools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Nuevo, Me.AbrirArchivo, Me.GuardarArchivo, Me.GuardarComo, Me.ToolStripSeparator2, Me.Edicion, Me.ToolStripSeparator1, Me.CerrarEditor})
         Me.Tools.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
         Me.Tools.Location = New System.Drawing.Point(0, 0)
         Me.Tools.Name = "Tools"
@@ -69,23 +78,88 @@ Partial Class Editor
         Me.Tools.TabIndex = 1
         Me.Tools.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'Nuevo
         '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = Global.Episteme.My.Resources.Resources.Open_file
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 20)
-        Me.ToolStripButton1.Text = "Abrir un archivo"
+        Me.Nuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Nuevo.Image = Global.Episteme.My.Resources.Resources.Document
+        Me.Nuevo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Nuevo.Name = "Nuevo"
+        Me.Nuevo.Size = New System.Drawing.Size(23, 20)
+        Me.Nuevo.Text = "Nuevo"
         '
-        'ToolStripButton2
+        'AbrirArchivo
         '
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = Global.Episteme.My.Resources.Resources.Save
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(23, 20)
-        Me.ToolStripButton2.Text = "Guardar el archivo"
+        Me.AbrirArchivo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.AbrirArchivo.Image = CType(resources.GetObject("AbrirArchivo.Image"), System.Drawing.Image)
+        Me.AbrirArchivo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.AbrirArchivo.Name = "AbrirArchivo"
+        Me.AbrirArchivo.Size = New System.Drawing.Size(23, 20)
+        Me.AbrirArchivo.Text = "Abrir"
+        '
+        'GuardarArchivo
+        '
+        Me.GuardarArchivo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.GuardarArchivo.Image = Global.Episteme.My.Resources.Resources.Save
+        Me.GuardarArchivo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.GuardarArchivo.Name = "GuardarArchivo"
+        Me.GuardarArchivo.Size = New System.Drawing.Size(23, 20)
+        Me.GuardarArchivo.Text = "Guardar"
+        '
+        'GuardarComo
+        '
+        Me.GuardarComo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.GuardarComo.Image = Global.Episteme.My.Resources.Resources.Save_as
+        Me.GuardarComo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.GuardarComo.Name = "GuardarComo"
+        Me.GuardarComo.Size = New System.Drawing.Size(23, 20)
+        Me.GuardarComo.Text = "Guardar como"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 23)
+        '
+        'Edicion
+        '
+        Me.Edicion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Edicion.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CortarToolStripMenuItem, Me.CopiarToolStripMenuItem, Me.PegarToolStripMenuItem})
+        Me.Edicion.Image = Global.Episteme.My.Resources.Resources.Clipboard
+        Me.Edicion.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Edicion.Name = "Edicion"
+        Me.Edicion.Size = New System.Drawing.Size(29, 20)
+        Me.Edicion.Text = "Edición"
+        '
+        'CortarToolStripMenuItem
+        '
+        Me.CortarToolStripMenuItem.Name = "CortarToolStripMenuItem"
+        Me.CortarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CortarToolStripMenuItem.Text = "Cortar"
+        '
+        'CopiarToolStripMenuItem
+        '
+        Me.CopiarToolStripMenuItem.Name = "CopiarToolStripMenuItem"
+        Me.CopiarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CopiarToolStripMenuItem.Text = "Copiar"
+        '
+        'PegarToolStripMenuItem
+        '
+        Me.PegarToolStripMenuItem.Name = "PegarToolStripMenuItem"
+        Me.PegarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PegarToolStripMenuItem.Text = "Pegar"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 23)
+        '
+        'CerrarEditor
+        '
+        Me.CerrarEditor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CerrarEditor.Image = Global.Episteme.My.Resources.Resources.Delete
+        Me.CerrarEditor.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.CerrarEditor.Name = "CerrarEditor"
+        Me.CerrarEditor.Size = New System.Drawing.Size(23, 20)
+        Me.CerrarEditor.Text = "Salir"
         '
         'Abrir
         '
@@ -111,7 +185,7 @@ Partial Class Editor
         Me.Controls.Add(Me.StatusStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Editor"
-        Me.Text = "Editor"
+        Me.Text = "Editor de Texto"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.Tools.ResumeLayout(False)
@@ -122,11 +196,20 @@ Partial Class Editor
     End Sub
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents Tools As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents AbrirArchivo As System.Windows.Forms.ToolStripButton
+    Friend WithEvents GuardarArchivo As System.Windows.Forms.ToolStripButton
     Friend WithEvents Abrir As System.Windows.Forms.OpenFileDialog
     Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel2 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents AreaTexto As System.Windows.Forms.TextBox
     Friend WithEvents Guardar As System.Windows.Forms.SaveFileDialog
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents GuardarComo As System.Windows.Forms.ToolStripButton
+    Friend WithEvents CerrarEditor As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Nuevo As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Edicion As System.Windows.Forms.ToolStripDropDownButton
+    Friend WithEvents CortarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CopiarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PegarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

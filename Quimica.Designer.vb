@@ -22,6 +22,7 @@ Partial Class Quimica
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Quimica))
         Me.QuimicaBody = New System.Windows.Forms.TableLayoutPanel()
         Me.QuimicaBtnTable = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnChemDoc = New System.Windows.Forms.Button()
@@ -70,7 +71,6 @@ Partial Class Quimica
         'BtnChemDoc
         '
         Me.BtnChemDoc.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnChemDoc.Enabled = False
         Me.BtnChemDoc.Location = New System.Drawing.Point(3, 3)
         Me.BtnChemDoc.Name = "BtnChemDoc"
         Me.BtnChemDoc.Size = New System.Drawing.Size(295, 55)
@@ -118,6 +118,7 @@ Partial Class Quimica
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(307, 167)
         Me.Controls.Add(Me.QuimicaBody)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Quimica"
         Me.Text = "Química - Episteme"
         Me.QuimicaBody.ResumeLayout(False)

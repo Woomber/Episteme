@@ -22,6 +22,7 @@ Partial Class Juegos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Juegos))
         Me.JuegosBody = New System.Windows.Forms.TableLayoutPanel()
         Me.JuegosBtnTable = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnBetcha = New System.Windows.Forms.Button()
@@ -63,7 +64,7 @@ Partial Class Juegos
         Me.JuegosBtnTable.Name = "JuegosBtnTable"
         Me.JuegosBtnTable.RowCount = 1
         Me.JuegosBtnTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.JuegosBtnTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.JuegosBtnTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70.0!))
         Me.JuegosBtnTable.Size = New System.Drawing.Size(676, 70)
         Me.JuegosBtnTable.TabIndex = 0
         '
@@ -129,6 +130,7 @@ Partial Class Juegos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(682, 176)
         Me.Controls.Add(Me.JuegosBody)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Juegos"
         Me.Text = "Juegos - Episteme"
         Me.JuegosBody.ResumeLayout(False)

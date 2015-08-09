@@ -35,3 +35,4 @@ C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.application
 C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.exe
 C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.xml
 C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.pdb
+C:\Users\Yael\Documents\GitHub\Episteme\obj\Debug\Episteme.Calc.resources

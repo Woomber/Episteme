@@ -63,7 +63,7 @@ Public Class RNDGen
         Estado.Text = "Preparado"
         Resultados.Items.Clear()
         Resultados.Items.Add("RND")
-        Resultados.Items.Add("Copyright © 2014")
+        Resultados.Items.Add("Copyright © 2014 - 2015")
         Resultados.Items.Add("Yael Arturo Chavoya Andalón")
     End Sub
 

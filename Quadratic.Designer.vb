@@ -393,7 +393,7 @@ Partial Class Quadratic
         Me.ListBox1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.ListBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Items.AddRange(New Object() {"Qadratic", "Copyright © 2014", "Yael Arturo Chavoya Andalón"})
+        Me.ListBox1.Items.AddRange(New Object() {"Qadratic", "Copyright © 2014 - 2015", "Yael Arturo Chavoya Andalón"})
         Me.ListBox1.Location = New System.Drawing.Point(3, 16)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(284, 195)

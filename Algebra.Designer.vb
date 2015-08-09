@@ -22,6 +22,7 @@ Partial Class Algebra
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Algebra))
         Me.AlgebraBody = New System.Windows.Forms.TableLayoutPanel()
         Me.AlgebraBtnTable = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnKross = New System.Windows.Forms.Button()
@@ -169,6 +170,7 @@ Partial Class Algebra
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(682, 183)
         Me.Controls.Add(Me.AlgebraBody)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Algebra"
         Me.Text = "Álgebra - Episteme"
         Me.AlgebraBody.ResumeLayout(False)

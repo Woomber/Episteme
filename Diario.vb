@@ -1,7 +1,7 @@
 ﻿Public Class Diario
     'Una GUI para acceder a los programas de uso diario
     Private Sub BtnCalc_Click(sender As Object, e As EventArgs) Handles BtnCalc.Click
-
+        Calc.Show()
     End Sub
 
     Private Sub BtnEplog_Click(sender As Object, e As EventArgs) Handles BtnEplog.Click

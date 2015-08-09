@@ -23,8 +23,8 @@ Partial Class ChemDoc
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ChemDoc))
         Dim SimboloLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ChemDoc))
         Me.MenuBar = New System.Windows.Forms.MenuStrip()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -33,6 +33,11 @@ Partial Class ChemDoc
         Me.MenuTabs = New System.Windows.Forms.TabControl()
         Me.Oxidos = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.SimboloTextBox = New System.Windows.Forms.TextBox()
+        Me.SimboloBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Elements = New Episteme.ElementsDataSet()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
@@ -48,42 +53,46 @@ Partial Class ChemDoc
         Me.Hidruros = New System.Windows.Forms.TabPage()
         Me.Oxacidos = New System.Windows.Forms.TabPage()
         Me.MainTable = New System.Windows.Forms.TableLayoutPanel()
-        Me.Elements = New Episteme.ElementsDataSet()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.SimboloBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SimboloTableAdapter = New Episteme.ElementsDataSetTableAdapters.SimboloTableAdapter()
         Me.TableAdapterManager = New Episteme.ElementsDataSetTableAdapters.TableAdapterManager()
         Me.SimboloBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.SimboloBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.SimboloTextBox = New System.Windows.Forms.TextBox()
         SimboloLabel = New System.Windows.Forms.Label()
         Me.MenuBar.SuspendLayout()
         Me.Status.SuspendLayout()
         Me.MenuTabs.SuspendLayout()
         Me.Oxidos.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.SimboloBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Elements, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.MainTable.SuspendLayout()
-        CType(Me.Elements, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SimboloBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SimboloBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SimboloBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'SimboloLabel
+        '
+        SimboloLabel.AutoSize = True
+        SimboloLabel.Location = New System.Drawing.Point(95, 76)
+        SimboloLabel.Name = "SimboloLabel"
+        SimboloLabel.Size = New System.Drawing.Size(47, 13)
+        SimboloLabel.TabIndex = 2
+        SimboloLabel.Text = "Simbolo:"
         '
         'MenuBar
         '
@@ -165,6 +174,41 @@ Partial Class ChemDoc
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Resultado"
+        '
+        'SimboloTextBox
+        '
+        Me.SimboloTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SimboloBindingSource, "Simbolo", True))
+        Me.SimboloTextBox.Location = New System.Drawing.Point(148, 73)
+        Me.SimboloTextBox.Name = "SimboloTextBox"
+        Me.SimboloTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.SimboloTextBox.TabIndex = 3
+        '
+        'SimboloBindingSource
+        '
+        Me.SimboloBindingSource.DataMember = "Simbolo"
+        Me.SimboloBindingSource.DataSource = Me.Elements
+        '
+        'Elements
+        '
+        Me.Elements.DataSetName = "ElementsDataSet"
+        Me.Elements.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(41, 137)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 1
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 26)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Label3"
         '
         'GroupBox2
         '
@@ -339,33 +383,6 @@ Partial Class ChemDoc
         Me.MainTable.Size = New System.Drawing.Size(565, 280)
         Me.MainTable.TabIndex = 3
         '
-        'Elements
-        '
-        Me.Elements.DataSetName = "ElementsDataSet"
-        Me.Elements.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 26)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Label3"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(41, 137)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 1
-        '
-        'SimboloBindingSource
-        '
-        Me.SimboloBindingSource.DataMember = "Simbolo"
-        Me.SimboloBindingSource.DataSource = Me.Elements
-        '
         'SimboloTableAdapter
         '
         Me.SimboloTableAdapter.ClearBeforeFill = True
@@ -393,6 +410,31 @@ Partial Class ChemDoc
         Me.SimboloBindingNavigator.Size = New System.Drawing.Size(565, 25)
         Me.SimboloBindingNavigator.TabIndex = 4
         Me.SimboloBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -426,17 +468,10 @@ Partial Class ChemDoc
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 15)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -444,7 +479,7 @@ Partial Class ChemDoc
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
         '
         'BindingNavigatorMoveLastItem
@@ -453,57 +488,21 @@ Partial Class ChemDoc
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Mover último"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'SimboloBindingNavigatorSaveItem
         '
         Me.SimboloBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.SimboloBindingNavigatorSaveItem.Image = CType(resources.GetObject("SimboloBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.SimboloBindingNavigatorSaveItem.Name = "SimboloBindingNavigatorSaveItem"
-        Me.SimboloBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.SimboloBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.SimboloBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'SimboloLabel
-        '
-        SimboloLabel.AutoSize = True
-        SimboloLabel.Location = New System.Drawing.Point(95, 76)
-        SimboloLabel.Name = "SimboloLabel"
-        SimboloLabel.Size = New System.Drawing.Size(47, 13)
-        SimboloLabel.TabIndex = 2
-        SimboloLabel.Text = "Simbolo:"
-        'AddHandler SimboloLabel.Click, AddressOf Me.SimboloLabel_Click
-        '
-        'SimboloTextBox
-        '
-        Me.SimboloTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SimboloBindingSource, "Simbolo", True))
-        Me.SimboloTextBox.Location = New System.Drawing.Point(148, 73)
-        Me.SimboloTextBox.Name = "SimboloTextBox"
-        Me.SimboloTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.SimboloTextBox.TabIndex = 3
         '
         'ChemDoc
         '
@@ -516,6 +515,7 @@ Partial Class ChemDoc
         Me.Controls.Add(Me.Status)
         Me.Controls.Add(Me.MenuBar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuBar
         Me.MaximizeBox = False
         Me.Name = "ChemDoc"
@@ -528,6 +528,8 @@ Partial Class ChemDoc
         Me.Oxidos.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.SimboloBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Elements, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
@@ -535,8 +537,6 @@ Partial Class ChemDoc
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.MainTable.ResumeLayout(False)
-        CType(Me.Elements, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SimboloBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SimboloBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SimboloBindingNavigator.ResumeLayout(False)
         Me.SimboloBindingNavigator.PerformLayout()

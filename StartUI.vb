@@ -137,4 +137,8 @@ Public Class StartUI
     Private Sub Numeros_Launch_Click(sender As Object, e As EventArgs) Handles Numeros_Launch.Click
         Numeros.Show()
     End Sub
+
+    Private Sub ReportarErrorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportarErrorToolStripMenuItem.Click
+        System.Diagnostics.Process.Start("https://github.com/Woomber/Episteme/issues")
+    End Sub
 End Class

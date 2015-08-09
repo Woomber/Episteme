@@ -22,6 +22,7 @@ Partial Class Numeros
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Numeros))
         Me.NumerosBody = New System.Windows.Forms.TableLayoutPanel()
         Me.NumerosBtnTable = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnDoubleM = New System.Windows.Forms.Button()
@@ -180,6 +181,7 @@ Partial Class Numeros
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(682, 240)
         Me.Controls.Add(Me.NumerosBody)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Numeros"
         Me.Text = "Números - Episteme"
         Me.NumerosBody.ResumeLayout(False)

@@ -22,6 +22,7 @@ Partial Class Diario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Diario))
         Me.DiarioBody = New System.Windows.Forms.TableLayoutPanel()
         Me.DiarioBtnTable = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnIMC = New System.Windows.Forms.Button()
@@ -106,7 +107,6 @@ Partial Class Diario
         'BtnCalc
         '
         Me.BtnCalc.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnCalc.Enabled = False
         Me.BtnCalc.Location = New System.Drawing.Point(3, 3)
         Me.BtnCalc.Name = "BtnCalc"
         Me.BtnCalc.Size = New System.Drawing.Size(332, 61)
@@ -154,6 +154,7 @@ Partial Class Diario
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(682, 240)
         Me.Controls.Add(Me.DiarioBody)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Diario"
         Me.Text = "Uso diario - Episteme"
         Me.DiarioBody.ResumeLayout(False)

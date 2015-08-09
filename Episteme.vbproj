@@ -29,7 +29,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -114,6 +114,12 @@
       <DependentUpon>AboutBox1.vb</DependentUpon>
     </Compile>
     <Compile Include="AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calc.Designer.vb">
+      <DependentUpon>Calc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Calc.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IsPrime.Designer.vb">
@@ -270,6 +276,9 @@
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Calc.resx">
+      <DependentUpon>Calc.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IsPrime.resx">
       <DependentUpon>IsPrime.vb</DependentUpon>
     </EmbeddedResource>
@@ -387,6 +396,9 @@
     <Content Include="Elements.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Save as.png" />
+    <None Include="Resources\Document.png" />
+    <None Include="Resources\Clipboard.png" />
     <None Include="Resources\Save.png" />
     <None Include="Resources\Open file.png" />
     <None Include="Resources\Delete.png" />

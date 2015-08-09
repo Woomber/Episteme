@@ -22,6 +22,7 @@ Partial Class Electro
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Electro))
         Me.ElectroBody = New System.Windows.Forms.TableLayoutPanel()
         Me.ElectroBtnTable = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnResist = New System.Windows.Forms.Button()
@@ -117,6 +118,7 @@ Partial Class Electro
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(307, 167)
         Me.Controls.Add(Me.ElectroBody)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Electro"
         Me.Text = "Electrónica - Episteme"
         Me.ElectroBody.ResumeLayout(False)

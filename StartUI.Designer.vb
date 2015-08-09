@@ -22,6 +22,7 @@ Partial Class StartUI
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StartUI))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbrirArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -49,6 +50,7 @@ Partial Class StartUI
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.Bienvenido = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ChemDoc_Launch = New System.Windows.Forms.Button()
+        Me.ReportarErrorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.MAINUI.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -135,7 +137,7 @@ Partial Class StartUI
         '
         'AyudaToolStripMenuItem
         '
-        Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AcercaDeEpistemeToolStripMenuItem, Me.SitioWebToolStripMenuItem})
+        Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AcercaDeEpistemeToolStripMenuItem, Me.SitioWebToolStripMenuItem, Me.ReportarErrorToolStripMenuItem})
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
         Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
@@ -290,6 +292,12 @@ Partial Class StartUI
         Me.ChemDoc_Launch.Text = "Química" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Mezcla los elementos"
         Me.ChemDoc_Launch.UseVisualStyleBackColor = True
         '
+        'ReportarErrorToolStripMenuItem
+        '
+        Me.ReportarErrorToolStripMenuItem.Name = "ReportarErrorToolStripMenuItem"
+        Me.ReportarErrorToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.ReportarErrorToolStripMenuItem.Text = "Reportar Error"
+        '
         'StartUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -297,6 +305,7 @@ Partial Class StartUI
         Me.ClientSize = New System.Drawing.Size(683, 206)
         Me.Controls.Add(Me.MAINUI)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MinimumSize = New System.Drawing.Size(380, 172)
         Me.Name = "StartUI"
@@ -339,5 +348,6 @@ Partial Class StartUI
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents Bienvenido As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ChemDoc_Launch As System.Windows.Forms.Button
+    Friend WithEvents ReportarErrorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

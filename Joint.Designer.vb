@@ -22,6 +22,7 @@ Partial Class Joint
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Joint))
         Me.Esqueleto = New System.Windows.Forms.TableLayoutPanel()
         Me.EsqConjU = New System.Windows.Forms.TableLayoutPanel()
         Me.U = New System.Windows.Forms.ListBox()
@@ -573,6 +574,7 @@ Partial Class Joint
         Me.ClientSize = New System.Drawing.Size(845, 451)
         Me.Controls.Add(Me.Esqueleto)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Joint"
         Me.Text = "Joint"

@@ -22,6 +22,7 @@ Partial Class IMC
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IMC))
         Me.Calculate = New System.Windows.Forms.Button()
         Me.HeightP = New System.Windows.Forms.TextBox()
         Me.Weight = New System.Windows.Forms.TextBox()
@@ -125,7 +126,7 @@ Partial Class IMC
         '
         Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
         Me.CerrarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
         '
         'IMC
@@ -142,7 +143,8 @@ Partial Class IMC
         Me.Controls.Add(Me.Weight)
         Me.Controls.Add(Me.HeightP)
         Me.Controls.Add(Me.Calculate)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(346, 224)

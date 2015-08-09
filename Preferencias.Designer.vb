@@ -22,6 +22,7 @@ Partial Class Preferencias
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Preferencias))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Nombre = New System.Windows.Forms.TextBox()
         Me.Guardar = New System.Windows.Forms.Button()
@@ -88,6 +89,7 @@ Partial Class Preferencias
         Me.Controls.Add(Me.Label1)
         Me.Cursor = System.Windows.Forms.Cursors.Cross
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Preferencias"
         Me.Text = "Preferencias"
         Me.ResumeLayout(False)

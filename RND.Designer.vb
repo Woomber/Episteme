@@ -23,6 +23,7 @@ Partial Class RNDGen
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RNDGen))
         Me.Generar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -206,7 +207,7 @@ Partial Class RNDGen
         Me.Resultados.Cursor = System.Windows.Forms.Cursors.Cross
         Me.Resultados.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Resultados.FormattingEnabled = True
-        Me.Resultados.Items.AddRange(New Object() {"RND", "Copyright © 2014", "Yael Arturo Chavoya Andalón"})
+        Me.Resultados.Items.AddRange(New Object() {"RND", "Copyright © 2014 - 2015", "Yael Arturo Chavoya Andalón"})
         Me.Resultados.Location = New System.Drawing.Point(123, 3)
         Me.Resultados.Name = "Resultados"
         Me.Resultados.Size = New System.Drawing.Size(359, 239)
@@ -245,14 +246,14 @@ Partial Class RNDGen
         'GuardarToolStripMenuItem
         '
         Me.GuardarToolStripMenuItem.Name = "GuardarToolStripMenuItem"
-        Me.GuardarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GuardarToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.GuardarToolStripMenuItem.Text = "Guardar"
         '
         'CerrarToolStripMenuItem
         '
         Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
         Me.CerrarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
         '
         'Guardado
@@ -269,6 +270,7 @@ Partial Class RNDGen
         Me.ClientSize = New System.Drawing.Size(485, 289)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MinimumSize = New System.Drawing.Size(270, 300)
         Me.Name = "RNDGen"

@@ -65,7 +65,7 @@
         StatusLabel.Text = "Preparado"
         ListBox1.Items.Clear()
         ListBox1.Items.Add("Qadratic")
-        ListBox1.Items.Add("Copyright © 2014")
+        ListBox1.Items.Add("Copyright © 2014 - 2015")
         ListBox1.Items.Add("Yael Arturo Chavoya Andalón")
     End Sub
 
